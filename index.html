@@ -80,7 +80,7 @@ button{font:inherit;color:inherit}
 .overlay.open{opacity:1;visibility:visible;transition:opacity .35s var(--ease)}
 .overlay__close{position:absolute;top:19px;right:var(--g);display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 18px;border-radius:999px;border:2px solid rgba(255,255,255,.45);background:transparent;color:var(--branco);font-weight:700;cursor:pointer}
 .overlay nav{display:flex;flex-direction:column;justify-content:center;padding:110px var(--g) 60px}
-.overlay nav a{font-family:var(--t);font-weight:900;font-size:clamp(34px,5.4vw,72px);letter-spacing:-.025em;line-height:1.12;color:rgba(255,255,255,.55);transition:color .2s;width:fit-content}
+.overlay nav a{font-family:var(--t);font-weight:900;font-size:clamp(30px,4.2vw,56px);letter-spacing:-.025em;line-height:1.14;color:rgba(255,255,255,.55);transition:color .2s;width:fit-content}
 .overlay nav a:hover,.overlay nav a:focus-visible{color:var(--branco)}
 .overlay nav a:hover::after{content:"";display:block;height:5px;width:100%;background:var(--verde);margin-top:-4px}
 .overlay aside{background:var(--azul-cheio);padding:110px var(--g) 60px;display:flex;flex-direction:column;justify-content:center;gap:26px}
@@ -94,11 +94,11 @@ button{font:inherit;color:inherit}
 .hero__img img{width:100%;height:100%;object-fit:cover;object-position:70% 55%}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(21,22,74,.94) 0%,rgba(37,38,122,.82) 42%,rgba(37,38,122,.25) 75%,rgba(37,38,122,.15) 100%),linear-gradient(0deg,rgba(21,22,74,.85) 0%,rgba(21,22,74,0) 45%)}
 .hero .wrap{padding-top:140px;padding-bottom:clamp(40px,6vw,72px)}
-.hero h1{color:var(--branco);font-weight:900;font-size:clamp(44px,8vw,124px);line-height:.95;letter-spacing:-.04em}
+.hero h1{color:var(--branco);font-weight:900;font-size:clamp(40px,6.2vw,92px);line-height:.98;letter-spacing:-.04em}
 .hero h1 .l1{display:block}
 .hero h1 .hl{color:var(--verde-claro)}
 .hero__foot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;margin-top:clamp(36px,5vw,64px);padding-top:28px;border-top:1px solid var(--linha-b)}
-.hero__foot p{max-width:46ch;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.85)}
+.hero__foot p{max-width:46ch;font-size:clamp(16px,1.2vw,18px);color:rgba(255,255,255,.85)}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero__meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px;font-size:14px;font-weight:600;color:rgba(255,255,255,.75)}
 .hero__meta span{display:inline-flex;align-items:center;gap:8px}
@@ -106,7 +106,7 @@ button{font:inherit;color:inherit}
 
 /* ---------- Manifesto (sobre) ---------- */
 .manifest{padding-block:clamp(96px,12vw,170px)}
-.manifest__big{font-family:var(--t);font-weight:800;font-size:clamp(28px,3.6vw,52px);line-height:1.18;letter-spacing:-.02em;color:var(--azul-noite);max-width:24ch}
+.manifest__big{max-width:30ch;font-family:var(--t);font-weight:800;font-size:clamp(24px,2.8vw,40px);line-height:1.22;letter-spacing:-.02em;color:var(--azul-noite)}
 .manifest__big em{font-style:normal;color:var(--azul);box-shadow:inset 0 -.22em 0 rgba(98,178,87,.45)}
 .manifest__cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(48px,6vw,80px)}
 .manifest__cols li{padding:30px 28px 32px;background:var(--branco);border:1px solid var(--linha);border-top:5px solid var(--azul);border-radius:6px}
@@ -119,7 +119,7 @@ button{font:inherit;color:inherit}
 /* ---------- Comparador 1993 / 2024 ---------- */
 .time{background:var(--papel);padding-block:clamp(80px,9vw,130px)}
 .time__head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:40px}
-.time__head h2{font-weight:900;font-size:clamp(32px,4vw,56px);letter-spacing:-.03em;max-width:15ch}
+.time__head h2{font-weight:900;font-size:clamp(28px,3.2vw,44px);letter-spacing:-.03em;max-width:15ch}
 .time__head p{max-width:38ch;color:var(--suave)}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,24px)}
 .pair__item{position:relative;margin:0;border-radius:6px;overflow:hidden;background:#ccc}
@@ -130,37 +130,37 @@ button{font:inherit;color:inherit}
 /* ---------- Serviços: índice tipográfico ---------- */
 .idx{background:var(--azul-cheio);color:var(--branco);padding-block:clamp(88px,10vw,140px)}
 .idx__head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
-.idx__head h2{color:var(--branco);font-weight:900;font-size:clamp(32px,4vw,56px);letter-spacing:-.03em;max-width:14ch}
+.idx__head h2{color:var(--branco);font-weight:900;font-size:clamp(28px,3.2vw,44px);letter-spacing:-.03em;max-width:14ch}
 .idx__head p{color:rgba(255,255,255,.78);max-width:44ch;justify-self:end}
 .idx ul{border-top:1px solid var(--linha-b)}
 .idx li{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 64px;gap:32px;align-items:center;padding:clamp(22px,2.6vw,34px) 0;border-bottom:1px solid var(--linha-b);isolation:isolate}
 .idx li::before{content:"";position:absolute;inset:0 calc(var(--g) * -1);background:var(--azul-noite);z-index:-1;transform:scaleY(0);transform-origin:bottom;transition:transform .4s var(--ease)}
 .idx li:hover::before{transform:scaleY(1)}
-.idx h3{color:var(--branco);font-weight:900;font-size:clamp(28px,4vw,58px);letter-spacing:-.035em;line-height:1}
+.idx h3{color:var(--branco);font-weight:900;font-size:clamp(24px,3vw,42px);letter-spacing:-.035em;line-height:1}
 .idx li p{color:rgba(255,255,255,.75);font-size:17px;max-width:36ch}
 .idx__ico{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;border:2px solid var(--verde);color:var(--verde-claro);transition:background .3s,color .3s}
 .idx__ico .ic{width:26px;height:26px}
 .idx li:hover .idx__ico{background:var(--verde);color:var(--azul-noite)}
 .idx__cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:56px}
-.idx__cta p{font-family:var(--t);font-weight:800;font-size:clamp(20px,2vw,26px);color:var(--branco)}
+.idx__cta p{font-family:var(--t);font-weight:800;font-size:clamp(18px,1.6vw,22px);color:var(--branco)}
 
 /* ---------- Diferenciais: cinco palavras ---------- */
 .words{position:relative;color:var(--branco);overflow:hidden;isolation:isolate;padding-block:clamp(96px,11vw,160px)}
 .words__img{position:absolute;inset:0;z-index:-2}
 .words__img img{width:100%;height:100%;object-fit:cover;object-position:55% 50%;filter:grayscale(1) contrast(1.1)}
 .words::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(21,22,74,.88)}
-.words h2{color:var(--branco);font-weight:900;font-size:clamp(28px,3vw,40px);letter-spacing:-.02em;margin-bottom:clamp(40px,5vw,64px)}
+.words h2{color:var(--branco);font-weight:900;font-size:clamp(26px,2.6vw,34px);letter-spacing:-.02em;margin-bottom:clamp(40px,5vw,64px)}
 .words ol{display:grid;gap:0}
 .words li{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:baseline;padding:18px 0;border-top:1px solid var(--linha-b)}
 .words li:last-child{border-bottom:1px solid var(--linha-b)}
-.words b{font-family:var(--t);font-weight:900;font-size:clamp(34px,5.2vw,80px);letter-spacing:-.04em;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.55);transition:color .35s,-webkit-text-stroke-color .35s}
+.words b{font-family:var(--t);font-weight:900;font-size:clamp(30px,4vw,60px);letter-spacing:-.04em;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.55);transition:color .35s,-webkit-text-stroke-color .35s}
 .words li.lit b,.words li:hover b{color:var(--branco);-webkit-text-stroke-color:var(--branco)}
 .words li.lit{border-top-color:var(--verde)}
 .words li p{color:rgba(255,255,255,.8);font-size:17px;max-width:40ch}
 
 /* ---------- Como trabalhamos: a rota ---------- */
 .route{padding-block:clamp(88px,10vw,140px)}
-.route h2{font-weight:900;font-size:clamp(32px,4vw,56px);letter-spacing:-.03em;max-width:16ch}
+.route h2{font-weight:900;font-size:clamp(28px,3.2vw,44px);letter-spacing:-.03em;max-width:16ch}
 .road{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:clamp(56px,6vw,88px)}
 .road::before{content:"";position:absolute;left:0;right:0;top:22px;height:8px;background:var(--papel);border-radius:8px}
 .road::after{content:"";position:absolute;left:0;right:0;top:25px;border-top:2px dashed rgba(47,49,140,.45)}
@@ -173,8 +173,8 @@ button{font:inherit;color:inherit}
 
 /* ---------- Contato: o número é o título ---------- */
 .call{background:var(--azul-cheio);color:var(--branco);padding-block:clamp(88px,10vw,140px) 0;overflow:hidden}
-.call__q{font-family:var(--t);font-weight:800;font-size:clamp(22px,2.2vw,30px);color:rgba(255,255,255,.85)}
-.call__num{display:block;font-family:var(--t);font-weight:900;font-size:clamp(44px,10vw,148px);letter-spacing:-.045em;line-height:.95;color:var(--branco);margin-top:18px;white-space:nowrap;transition:color .25s}
+.call__q{font-family:var(--t);font-weight:800;font-size:clamp(20px,1.8vw,26px);color:rgba(255,255,255,.85)}
+.call__num{display:block;font-family:var(--t);font-weight:900;font-size:clamp(40px,7.6vw,112px);letter-spacing:-.045em;line-height:.95;color:var(--branco);margin-top:18px;white-space:nowrap;transition:color .25s}
 .call__num:hover{color:var(--verde-claro)}
 .call__row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);margin-top:clamp(48px,6vw,80px);padding-top:40px;border-top:1px solid var(--linha-b);align-items:start}
 .call__info p{color:rgba(255,255,255,.8)}
