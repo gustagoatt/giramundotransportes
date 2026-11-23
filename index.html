@@ -77,7 +77,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .brand span{font-family:var(--h);font-weight:700;font-size:14px;line-height:1.2;color:var(--muted);border-left:1px solid var(--line);padding-left:14px}
 .brand span b{display:block;color:var(--navy);font-size:16px}
 .nav{display:flex;align-items:center;gap:28px}
-.nav ul{display:flex;gap:24px}
+.nav ul{display:flex;gap:20px}
 .nav ul a{font-family:var(--h);font-weight:700;font-size:18px;color:var(--navy);padding:26px 0;position:relative}
 .nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:16px;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
 .nav ul a:hover::after,.nav ul a.on::after{transform:scaleX(1)}
@@ -185,6 +185,25 @@ button,input,select,textarea{font:inherit;color:inherit}
 .form .btn{margin-top:20px;width:100%}
 .form__note{margin-top:12px;font-size:13px;color:var(--muted);text-align:center}
 
+
+/* ---------- Trabalhe conosco ---------- */
+.job{position:relative;background:var(--off);padding-block:clamp(88px,10vw,140px);overflow:hidden;isolation:isolate}
+.job::after{content:"";position:absolute;right:0;top:0;bottom:0;width:min(34vw,420px);background:var(--red);clip-path:polygon(38% 0,100% 0,100% 100%,0 100%);z-index:-1;opacity:.95}
+.job__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,80px);align-items:center}
+.job__cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:32px}
+.job__cta .btn .ic{width:22px;height:22px}
+.job__alt{font-weight:600;font-size:15px;color:var(--navy);border-bottom:1px solid var(--line)}
+.job__alt:hover{border-color:var(--red)}
+.job__mail{margin-top:18px;font-size:15px;color:var(--muted);word-break:break-word}
+.job__mail b{color:var(--navy)}
+.job__steps{background:#fff;padding:clamp(24px,3vw,36px);display:grid;gap:22px;box-shadow:0 18px 44px rgba(22,27,51,.12);clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%)}
+.job__steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
+.job__steps li+li{padding-top:22px;border-top:1px solid var(--line)}
+.job__steps span{display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:var(--navy);color:#fff;font-family:var(--h);font-weight:800;font-style:italic;font-size:22px}
+.job__steps li:last-child span{background:var(--red-ink)}
+.job__steps h3{font-size:21px;font-weight:800}
+.job__steps p{margin-top:4px;color:var(--muted);font-size:16px}
+
 /* ---------- Rodapé ---------- */
 .ft{background:#0E1126;color:rgba(255,255,255,.68);font-size:15px}
 .ft__top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;padding-block:64px 48px}
@@ -207,7 +226,7 @@ button,input,select,textarea{font:inherit;color:inherit}
    Responsivo
    ========================================================= */
 @media (max-width:1100px){
-  .nav ul{gap:16px}.nav ul a{font-size:17px}
+  .nav ul{gap:14px}.nav ul a{font-size:16px}
   .brand span{display:none}
 }
 @media (max-width:960px){
@@ -234,6 +253,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   .svc__grid{grid-template-columns:1fr}
   .svc__photo{min-height:340px}
   .quote__grid{grid-template-columns:1fr}
+  .job__grid{grid-template-columns:1fr}
+  .job::after{width:40vw;top:auto;height:180px;opacity:.9}
   .ft__top{grid-template-columns:1fr 1fr}
   .ft__brand{grid-column:1/-1}
 }
@@ -246,6 +267,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   .co__body{padding:30px 22px 52px}
   .co__body--mn{padding-top:30px}
   .form__grid{grid-template-columns:1fr}
+  .job__cta .btn{width:100%}
+  .job::after{display:none}
   .ft__top{grid-template-columns:1fr;gap:28px}
   .wa-float{right:16px;bottom:16px;width:56px;height:56px}
 }
@@ -268,6 +291,7 @@ button,input,select,textarea{font:inherit;color:inherit}
         <li><a href="#grupo">O Grupo</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#cotacao">Cotação</a></li>
+        <li><a href="#trabalhe-conosco">Trabalhe Conosco</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
       <a class="btn btn--red" href="#cotacao">Solicitar cotação</a>
@@ -367,7 +391,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <!-- COTAÇÃO -->
 <section class="quote" id="cotacao">
   <div class="wrap quote__grid">
-    <div class="rv" id="contato">
+    <div class="rv">
       <h2 class="tt"><small>Cotação</small>Faça uma cotação da sua carga</h2>
       <p class="lead">Preencha o formulário e a sua solicitação chega pronta no nosso WhatsApp. Se preferir, fale direto com a equipe.</p>
       <ul class="direct">
@@ -397,12 +421,32 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
+<!-- TRABALHE CONOSCO -->
+<section class="job" id="trabalhe-conosco">
+  <div class="wrap job__grid">
+    <div class="rv">
+      <h2 class="tt"><small>Trabalhe Conosco</small>Faça parte da G2M Log</h2>
+      <p class="lead">Quer trabalhar com a gente? Envie seu currículo para a nossa equipe. O e-mail já abre pronto, é só anexar o arquivo e enviar.</p>
+      <div class="job__cta">
+        <a class="btn btn--red" href="mailto:giramundotransportes120@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20G2M%20Log&amp;body=Ol%C3%A1%2C%20equipe%20G2M%20Log%21%0A%0ATenho%20interesse%20em%20trabalhar%20com%20voc%C3%AAs%20e%20envio%20meu%20curr%C3%ADculo%20em%20anexo.%0A%0ANome%3A%0ATelefone/WhatsApp%3A%0ACidade%3A%0A%C3%81rea%20de%20interesse%20%28ex.%3A%20motorista%2C%20administrativo%2C%20manuten%C3%A7%C3%A3o%29%3A%0A%0AObrigado%28a%29%21"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Enviar meu currículo</a>
+        <a class="job__alt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=giramundotransportes120@gmail.com&amp;su=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20G2M%20Log&amp;body=Ol%C3%A1%2C%20equipe%20G2M%20Log%21%0A%0ATenho%20interesse%20em%20trabalhar%20com%20voc%C3%AAs%20e%20envio%20meu%20curr%C3%ADculo%20em%20anexo.%0A%0ANome%3A%0ATelefone/WhatsApp%3A%0ACidade%3A%0A%C3%81rea%20de%20interesse%20%28ex.%3A%20motorista%2C%20administrativo%2C%20manuten%C3%A7%C3%A3o%29%3A%0A%0AObrigado%28a%29%21" target="_blank" rel="noopener">Usa Gmail no computador? Abrir no Gmail</a>
+      </div>
+      <p class="job__mail">Ou envie para <b>giramundotransportes120@gmail.com</b></p>
+    </div>
+    <ol class="job__steps rv">
+      <li><span>1</span><div><h3>Clique em "Enviar meu currículo"</h3><p>O seu e-mail abre com o destinatário, o assunto e a mensagem já preenchidos.</p></div></li>
+      <li><span>2</span><div><h3>Complete seus dados e anexe o currículo</h3><p>Preencha nome, telefone, cidade e área de interesse. Anexe o arquivo em PDF ou Word.</p></div></li>
+      <li><span>3</span><div><h3>Envie</h3><p>Nossa equipe recebe o seu currículo e entra em contato se houver uma vaga para o seu perfil.</p></div></li>
+    </ol>
+  </div>
+</section>
+
 </main>
 
-<footer class="ft">
+<footer class="ft" id="contato">
   <div class="wrap ft__top">
     <div class="ft__brand"><img src="assets/logo-g2m.png" alt="Logo G2M Log" loading="lazy"><p>Conectando cargas ao que move o Brasil.</p></div>
-    <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#grupo">O Grupo</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#cotacao">Cotação</a></li></ul></div>
+    <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#grupo">O Grupo</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#cotacao">Cotação</a></li><li><a href="#trabalhe-conosco">Trabalhe Conosco</a></li></ul></div>
     <div><h4>Empresas do grupo</h4><ul><li>GiraMundo Transportes</li><li>Mundo Novo Transportes</li></ul></div>
     <div><h4>Contato</h4><ul><li><a href="tel:+556630160656">(66) 3016-0656</a></li><li><a href="mailto:giramundotransportes120@gmail.com" style="word-break:break-all">giramundotransportes120@gmail.com</a></li><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a></li></ul></div>
   </div>
@@ -424,6 +468,21 @@ button,input,select,textarea{font:inherit;color:inherit}
   nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",close)});
   document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   window.addEventListener("resize",function(){if(window.innerWidth>960)close()});
+
+
+  /* menu: marca a seção que está na tela */
+  var links=[].slice.call(document.querySelectorAll(".nav ul a"));
+  var targets=links.map(function(l){return document.querySelector(l.getAttribute("href"))});
+  var ticking=false;
+  function mark(){
+    ticking=false;
+    var line=hd.offsetHeight+window.innerHeight*0.35, cur=0;
+    targets.forEach(function(t,i){ if(t && t.getBoundingClientRect().top<=line) cur=i; });
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets.length-1;
+    links.forEach(function(l,i){ l.classList.toggle("on",i===cur); if(i===cur) l.setAttribute("aria-current","true"); else l.removeAttribute("aria-current"); });
+  }
+  window.addEventListener("scroll",function(){ if(!ticking){ticking=true;requestAnimationFrame(mark);} },{passive:true});
+  window.addEventListener("resize",mark); mark();
 
   /* Cotação → WhatsApp com mensagem pronta */
   var form=document.getElementById("quoteForm"), err=document.getElementById("formErr");
@@ -455,9 +514,6 @@ button,input,select,textarea{font:inherit;color:inherit}
   }else{
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -6% 0px"});
     document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
-    var links=document.querySelectorAll(".nav ul a");
-    var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
-    document.querySelectorAll("main section[id]").forEach(function(s){spy.observe(s)});
   }
 })();
 </script>
