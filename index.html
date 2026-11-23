@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"G2M Log","description":"Grupo que reúne a GiraMundo Transportes e a Mundo Novo Transportes.","logo":"assets/logo-g2m.png","telephone":"+55-66-3016-0656","email":"giramundotransportes120@gmail.com","sameAs":["https://www.instagram.com/g2m.log/"],"subOrganization":[{"@type":"Organization","name":"GiraMundo Transportes","address":{"@type":"PostalAddress","streetAddress":"Av. Paulo César Aranda, 639 - Jardim Riva","addressLocality":"Primavera do Leste","addressRegion":"MT","postalCode":"78850-000","addressCountry":"BR"}},{"@type":"Organization","name":"Mundo Novo Transportes","sameAs":["https://www.instagram.com/mundonovotransportes/"]}]}
+{"@context":"https://schema.org","@type":"Organization","name":"G2M Log","description":"Grupo que reúne a GiraMundo Transportes e a Mundo Novo Transportes.","logo":"assets/logo-g2m.png","telephone":"+55-66-3016-0656","email":"giramundotransportes120@gmail.com","sameAs":["https://www.instagram.com/g2m.log/","https://www.instagram.com/giramundotransportes/","https://www.instagram.com/mundonovotransportes/"],"subOrganization":[{"@type":"Organization","name":"GiraMundo Transportes","sameAs":["https://www.instagram.com/giramundotransportes/"],"address":{"@type":"PostalAddress","streetAddress":"Av. Paulo César Aranda, 639 - Jardim Riva","addressLocality":"Primavera do Leste","addressRegion":"MT","postalCode":"78850-000","addressCountry":"BR"}},{"@type":"Organization","name":"Mundo Novo Transportes","sameAs":["https://www.instagram.com/mundonovotransportes/"]}]}
 </script>
 <style>
 /* =========================================================
@@ -228,6 +228,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .ft ul{display:grid;gap:9px}
 .ft a:hover{color:#fff}
 .ft__mail{white-space:nowrap;font-size:14.5px}
+.ft h4.ft__ig{margin-top:24px}
 .ft__bottom{border-top:1px solid rgba(255,255,255,.1);padding-block:20px;font-size:13px;color:rgba(255,255,255,.45)}
 
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:150;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(37,211,102,.45);transition:transform .25s var(--ease)}
@@ -282,9 +283,6 @@ button,input,select,textarea{font:inherit;color:inherit}
   body{font-size:16px}
   .hero h1{font-size:clamp(34px,11vw,50px)}
   .tt{font-size:clamp(27px,8.6vw,40px);overflow-wrap:break-word}
-}
-@media (max-width:380px){
-  .tt{font-size:clamp(24px,7.6vw,30px)}
   .hero__cta{flex-direction:column}
   .hero__cta .btn{width:100%}
   .co__body{padding:30px 22px 52px}
@@ -294,6 +292,9 @@ button,input,select,textarea{font:inherit;color:inherit}
   .job::after{display:none}
   .ft__top{grid-template-columns:1fr;gap:28px}
   .wa-float{right:16px;bottom:16px;width:56px;height:56px}
+}
+@media (max-width:380px){
+  .tt{font-size:clamp(24px,7.6vw,30px)}
 }
 </style>
 </head>
@@ -428,7 +429,7 @@ button,input,select,textarea{font:inherit;color:inherit}
         <li><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg><div><small>WhatsApp</small><a href="https://wa.me/556630160656?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte." target="_blank" rel="noopener">(66) 3016-0656</a></div></li>
         <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><small>Telefone</small><a href="tel:+556630160656">(66) 3016-0656</a></div></li>
         <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div><small>E-mail</small><a class="mail" href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></div></li>
-        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><div><small>Instagram</small><ul class="ig"><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a><span>G2M Log</span></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a><span>Mundo Novo Transportes</span></li></ul></div></li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><div><small>Instagram</small><ul class="ig"><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a><span>G2M Log</span></li><li><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a><span>GiraMundo Transportes</span></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a><span>Mundo Novo Transportes</span></li></ul></div></li>
       </ul>
     </div>
 
@@ -478,7 +479,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     <div class="ft__brand"><img src="assets/logo-g2m.png" alt="Logo G2M Log" loading="lazy"><p>Conectando cargas ao que move o Brasil.</p></div>
     <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#grupo">O Grupo</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#cotacao">Cotação</a></li><li><a href="#trabalhe-conosco">Trabalhe Conosco</a></li></ul></div>
     <div><h4>Empresas do grupo</h4><ul><li>GiraMundo Transportes</li><li>Mundo Novo Transportes</li></ul></div>
-    <div><h4>Contato</h4><ul><li><a href="tel:+556630160656">(66) 3016-0656</a></li><li><a class="ft__mail" href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></li><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li><a href="tel:+556630160656">(66) 3016-0656</a></li><li><a class="ft__mail" href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></li></ul><h4 class="ft__ig">Instagram</h4><ul><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a></li><li><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a></li></ul></div>
   </div>
   <div class="ft__bottom"><div class="wrap">© 2026 G2M Log. Todos os direitos reservados.</div></div>
 </footer>
