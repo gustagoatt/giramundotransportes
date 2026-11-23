@@ -92,15 +92,21 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
-.hero__photo{position:absolute;top:0;right:0;bottom:0;width:52%;z-index:-2;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%)}
+.hero__art{position:absolute;top:0;bottom:0;right:0;left:clamp(0px,(100vw - 1440px) / 2,260px);z-index:-1}
+.hero__photo{position:absolute;top:0;right:0;bottom:0;width:48%;z-index:-2;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%)}
 .hero__photo img{width:100%;height:100%;object-fit:cover;object-position:62% 55%}
-.hero__slash{position:absolute;top:0;bottom:0;right:calc(52% - 4%);width:9%;z-index:-1;background:var(--red);clip-path:polygon(62% 0,100% 0,38% 100%,0 100%)}
+/* Estrada: mesma inclinação da borda da foto (topo 62.56% → base 52% da largura do hero) */
+.hero__road{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;overflow:visible}
+.hero__road .asf{fill:#252A44}
+.hero__road .edge{stroke:var(--red);stroke-width:6;fill:none}
+.hero__road .mid{stroke:#E9EAEE;stroke-width:4;fill:none;stroke-dasharray:34 26;animation:road 1.8s linear infinite}
+@keyframes road{to{stroke-dashoffset:-60}}
 .hero .wrap{position:relative;padding-block:clamp(72px,9vw,132px) clamp(88px,10vw,150px)}
 .hero__group{display:inline-flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:16px;color:var(--steel);margin-bottom:22px}
 .hero__group::before{content:"";width:34px;height:4px;background:var(--red)}
 .hero h1{color:#fff;font-weight:800;font-style:italic;font-size:clamp(40px,5vw,72px);line-height:.98;max-width:12ch;text-transform:uppercase;letter-spacing:-.005em}
 .hero h1 em{font-style:italic;color:var(--red);-webkit-text-stroke:0}
-.hero__sub{margin-top:24px;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.82);max-width:40ch}
+.hero__sub{margin-top:24px;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.82);max-width:34ch}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 
 /* ---------- Faixa de valores ---------- */
@@ -222,11 +228,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.hero__road .mid{animation:none}}
 
 /* =========================================================
    Responsivo
    ========================================================= */
+@media (max-width:1500px) and (min-width:961px){
+  .hero__cta{flex-direction:column;align-items:flex-start}
+}
 @media (max-width:1100px){
   .nav ul{gap:14px}.nav ul a{font-size:16px}
   .brand span{display:none}
@@ -243,7 +252,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   .nav .btn{margin-top:18px;width:100%}
 
   .hero__photo{position:relative;width:100%;height:56vw;max-height:440px;clip-path:polygon(0 0,100% 0,100% 82%,0 100%)}
-  .hero__slash{display:none}
+  .hero__road{display:none}
+  .hero__art{position:static}
   .hero .wrap{padding-top:40px}
   .vals ul{grid-template-columns:1fr;gap:22px}
   .vals li,.vals li:first-child{padding:0}
@@ -306,8 +316,15 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+  <div class="hero__art">
   <div class="hero__photo" aria-hidden="true"><img src="assets/frota-giramundo.jpg" alt="" fetchpriority="high"></div>
-  <span class="hero__slash" aria-hidden="true"></span>
+  <svg class="hero__road" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <polygon class="asf" points="55.56,0 62.72,0 52.16,100 45,100"/>
+    <line class="edge" x1="55.56" y1="0" x2="45" y2="100" vector-effect="non-scaling-stroke"/>
+    <line class="edge" x1="62.56" y1="0" x2="52" y2="100" vector-effect="non-scaling-stroke"/>
+    <line class="mid" x1="59.06" y1="0" x2="48.5" y2="100" vector-effect="non-scaling-stroke"/>
+  </svg>
+  </div>
   <div class="wrap">
     <p class="hero__group">Grupo GiraMundo e Mundo Novo</p>
     <h1>Conectando cargas ao que <em>move o Brasil.</em></h1>
