@@ -70,6 +70,16 @@ button,input,select,textarea{font:inherit;color:inherit}
 .btn--line{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
 .btn--line:hover{box-shadow:inset 0 0 0 2px #fff}
 
+
+/* ---------- Par de faixas da marca (reutilizável) ---------- */
+.bands{display:inline-flex;gap:5px;flex:none;vertical-align:middle}
+.bands i{display:block;width:16px;height:12px;transform:skewX(-28deg)}
+.bands i:first-child{background:var(--navy)}
+.bands i:last-child{background:var(--red)}
+.bands--dark i:first-child{background:#fff}
+.bands--big{gap:14px}
+.bands--big i{width:clamp(48px,6vw,90px);height:100%}
+
 /* ---------- Header ---------- */
 .hd{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .3s var(--ease)}
 .hd.sh{box-shadow:0 8px 28px rgba(22,27,51,.10)}
@@ -95,23 +105,26 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero__art{position:absolute;top:0;bottom:0;right:0;left:clamp(0px,(100vw - 1440px) / 2,260px);z-index:-1}
 .hero__photo{position:absolute;top:0;right:0;bottom:0;width:48%;z-index:-2;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%)}
 .hero__photo img{width:100%;height:100%;object-fit:cover;object-position:62% 55%}
-/* Estrada: mesma inclinação da borda da foto (topo 62.56% → base 52% da largura do hero) */
-.hero__road{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;overflow:visible}
-.hero__road .asf{fill:#252A44}
-.hero__road .edge{stroke:var(--red);stroke-width:6;fill:none}
-.hero__road .mid{stroke:#E9EAEE;stroke-width:4;fill:none;stroke-dasharray:34 26;animation:road 1.8s linear infinite}
-@keyframes road{to{stroke-dashoffset:-60}}
+/* Faixas da marca (como na carreta G2M): paralelas à borda da foto (topo 62.56% → base 52%) */
+.hero__bands{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero__bands .b-red{fill:var(--red)}
+.hero__bands .b-white{fill:#FFFFFF}
 .hero .wrap{position:relative;padding-block:clamp(72px,9vw,132px) clamp(88px,10vw,150px)}
 .hero__group{display:inline-flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:16px;color:var(--steel);margin-bottom:22px}
-.hero__group::before{content:"";width:34px;height:4px;background:var(--red)}
+.hero__group .bands i{width:14px;height:10px}
 .hero h1{color:#fff;font-weight:800;font-style:italic;font-size:clamp(40px,5vw,72px);line-height:.98;max-width:12ch;text-transform:uppercase;letter-spacing:-.005em}
 .hero h1 em{font-style:italic;color:var(--red);-webkit-text-stroke:0}
 .hero__sub{margin-top:24px;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.82);max-width:34ch}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 
 /* ---------- Faixa de valores ---------- */
-.vals{position:relative;background:var(--red);color:#fff;margin-top:calc(var(--cut) * -1);clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);padding-top:calc(var(--cut) + 34px);padding-bottom:42px;z-index:1}
-.vals ul{display:grid;grid-template-columns:repeat(3,1fr)}
+.vals{position:relative;overflow:hidden;background:var(--red);color:#fff;margin-top:calc(var(--cut) * -1);clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);padding-top:calc(var(--cut) + 34px);padding-bottom:42px;z-index:1}
+.vals .wrap{position:relative}
+.vals__bands{position:absolute;right:calc(var(--g) * -1);top:calc(var(--cut) * -1 - 34px);bottom:-42px;display:flex;gap:14px;pointer-events:none;opacity:.9}
+.vals__bands i{display:block;width:clamp(40px,5vw,76px);transform:skewX(-28deg)}
+.vals__bands i:first-child{background:var(--navy)}
+.vals__bands i:last-child{background:#fff;opacity:.25}
+.vals ul{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr)}
 .vals li{display:flex;gap:18px;align-items:flex-start;padding:6px 28px}
 .vals li:first-child{padding-left:0}
 .vals li+li{border-left:1px solid rgba(255,255,255,.35)}
@@ -122,7 +135,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 /* ---------- Títulos de seção ---------- */
 .sec{padding-block:clamp(88px,10vw,140px)}
 .tt{font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(34px,3.8vw,54px);line-height:1}
-.tt small{display:block;font-style:normal;font-weight:700;font-size:.42em;letter-spacing:.02em;color:var(--red-ink);text-transform:none;margin-bottom:10px}
+.tt small{display:flex;align-items:center;gap:10px;font-style:normal;font-weight:700;font-size:.42em;letter-spacing:.02em;color:var(--red-ink);text-transform:none;margin-bottom:10px}
 .tt .ln{display:block}
 .lead{margin-top:18px;font-size:18px;color:var(--muted);max-width:56ch}
 
@@ -134,13 +147,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .co__img{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--navy)}
 .co__img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .co:hover .co__img img{transform:scale(1.03)}
-.co__img--mn{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%)}
-.co__img--mn::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,255,255,.035) 38px 40px)}
-.co__img--mn img{position:relative;width:auto;height:58%;object-fit:contain}
 .co__logo{display:block;width:76px;height:76px;margin:-72px 0 18px;border-radius:50%;background:#fff;box-shadow:0 8px 22px rgba(22,27,51,.25);position:relative;z-index:2}
 .co__logo img{width:100%;height:100%;border-radius:50%}
+.co__logo--fit img{object-fit:contain;padding:9px}
 .co__body{padding:34px 30px 52px;flex:1;display:flex;flex-direction:column}
-.co__body--mn{padding-top:56px}
 .co h3{font-weight:800;font-style:italic;text-transform:uppercase;font-size:30px}
 .co__tag{margin-top:4px;font-family:var(--h);font-weight:700;color:var(--red-ink);font-size:17px}
 .co p{margin-top:14px;color:var(--muted)}
@@ -155,7 +165,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .svc__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:stretch}
 .svc__photo{position:relative;min-height:520px;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 60px))}
 .svc__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 50%}
-.svc__photo span{position:absolute;left:0;bottom:60px;background:var(--red);color:#fff;font-family:var(--h);font-weight:800;font-style:italic;text-transform:uppercase;font-size:20px;padding:12px 22px 12px 20px}
+.svc__photo span .bands{margin-right:12px}
+.svc__photo span .bands i:first-child{background:#fff}
+.svc__photo span .bands i:last-child{background:var(--navy)}
+.svc__photo span{display:flex;align-items:center;position:absolute;left:0;bottom:60px;background:var(--red);color:#fff;font-family:var(--h);font-weight:800;font-style:italic;text-transform:uppercase;font-size:20px;padding:12px 22px 12px 20px}
 .svc__list{margin-top:36px;border-top:2px solid var(--navy)}
 .svc__list li{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
 .svc__ico{display:flex;align-items:center;justify-content:center;width:52px;height:52px;background:var(--navy);color:#fff;clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%)}
@@ -166,7 +179,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* ---------- Cotação ---------- */
 .quote{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate;clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);margin-top:calc(var(--cut) * -1);padding-block:calc(var(--cut) + clamp(64px,7vw,100px)) clamp(80px,9vw,120px)}
-.quote::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.03) 46px 48px)}
+.quote::before,.quote::after{content:"";position:absolute;top:0;bottom:0;z-index:-1;width:clamp(50px,6vw,96px);transform:skewX(-28deg);transform-origin:top}
+.quote::before{right:clamp(110px,12vw,200px);background:var(--red)}
+.quote::after{right:clamp(30px,4vw,70px);background:rgba(255,255,255,.08)}
 .quote__grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,5vw,80px);align-items:start}
 .quote .tt{color:#fff}
 .quote .tt small{color:var(--red)}
@@ -203,7 +218,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* ---------- Trabalhe conosco ---------- */
 .job{position:relative;background:var(--off);padding-block:clamp(88px,10vw,140px);overflow:hidden;isolation:isolate}
-.job::after{content:"";position:absolute;right:0;top:0;bottom:0;width:min(34vw,420px);background:var(--red);clip-path:polygon(38% 0,100% 0,100% 100%,0 100%);z-index:-1;opacity:.95}
+.job::before,.job::after{content:"";position:absolute;top:0;bottom:0;z-index:-1;width:clamp(60px,7vw,110px);transform:skewX(-28deg);transform-origin:bottom}
+.job::before{right:clamp(130px,13vw,230px);background:var(--navy)}
+.job::after{right:clamp(20px,3vw,60px);background:var(--red)}
 .job__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,80px);align-items:center}
 .job__cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:32px}
 .job__cta .btn .ic{width:22px;height:22px}
@@ -220,7 +237,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .job__steps p{margin-top:4px;color:var(--muted);font-size:16px}
 
 /* ---------- Rodapé ---------- */
-.ft{background:#0E1126;color:rgba(255,255,255,.68);font-size:15px}
+.ft{position:relative;overflow:hidden;background:#0E1126;color:rgba(255,255,255,.68);font-size:15px}
+.ft::before,.ft::after{content:"";position:absolute;top:0;height:8px;transform:skewX(-28deg)}
+.ft::before{left:0;width:38%;background:var(--red)}
+.ft::after{left:calc(38% + 10px);width:14%;background:#fff;opacity:.85}
 .ft__top{display:grid;grid-template-columns:1.2fr .8fr 1fr 1.35fr;gap:36px;padding-block:64px 48px}
 .ft__brand img{width:64px;height:64px}
 .ft__brand p{margin-top:16px;font-family:var(--h);font-weight:700;font-style:italic;text-transform:uppercase;color:#fff;font-size:20px;line-height:1.15;max-width:18ch}
@@ -237,7 +257,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.hero__road .mid{animation:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
 
 /* =========================================================
    Responsivo
@@ -261,7 +281,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .nav .btn{margin-top:18px;width:100%}
 
   .hero__photo{position:relative;width:100%;height:56vw;max-height:440px;clip-path:polygon(0 0,100% 0,100% 82%,0 100%)}
-  .hero__road{display:none}
+  .hero__bands{display:none}
   .hero__art{position:static}
   .hero .wrap{padding-top:40px}
   .vals ul{grid-template-columns:1fr;gap:22px}
@@ -273,9 +293,9 @@ button,input,select,textarea{font:inherit;color:inherit}
   .cos{grid-template-columns:1fr}
   .svc__grid{grid-template-columns:1fr}
   .svc__photo{min-height:340px}
-  .quote__grid{grid-template-columns:1fr}
+  .quote__grid{grid-template-columns:minmax(0,1fr)}
   .job__grid{grid-template-columns:1fr}
-  .job::after{width:40vw;top:auto;height:180px;opacity:.9}
+  .job::before,.job::after{top:auto;height:160px}
   .ft__top{grid-template-columns:1fr 1fr}
   .ft__brand{grid-column:1/-1}
 }
@@ -286,15 +306,16 @@ button,input,select,textarea{font:inherit;color:inherit}
   .hero__cta{flex-direction:column}
   .hero__cta .btn{width:100%}
   .co__body{padding:30px 22px 52px}
-  .co__body--mn{padding-top:30px}
   .form__grid{grid-template-columns:1fr}
   .job__cta .btn{width:100%}
-  .job::after{display:none}
+  .job::before,.job::after{display:none}
   .ft__top{grid-template-columns:1fr;gap:28px}
   .wa-float{right:16px;bottom:16px;width:56px;height:56px}
 }
 @media (max-width:380px){
   .tt{font-size:clamp(24px,7.6vw,30px)}
+  .direct a{font-size:19px}
+  .mail{font-size:13.5px!important}
 }
 </style>
 </head>
@@ -330,15 +351,13 @@ button,input,select,textarea{font:inherit;color:inherit}
 <section class="hero" id="inicio">
   <div class="hero__art">
   <div class="hero__photo" aria-hidden="true"><img src="assets/frota-giramundo.jpg" alt="" fetchpriority="high"></div>
-  <svg class="hero__road" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-    <polygon class="asf" points="55.56,0 62.72,0 52.16,100 45,100"/>
-    <line class="edge" x1="55.56" y1="0" x2="45" y2="100" vector-effect="non-scaling-stroke"/>
-    <line class="edge" x1="62.56" y1="0" x2="52" y2="100" vector-effect="non-scaling-stroke"/>
-    <line class="mid" x1="59.06" y1="0" x2="48.5" y2="100" vector-effect="non-scaling-stroke"/>
-  </svg>
+  <svg class="hero__bands" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <polygon class="b-red" points="57.86,0 61.86,0 51.3,100 47.3,100"/>
+      <polygon class="b-white" points="54.86,0 56.66,0 46.1,100 44.3,100"/>
+    </svg>
   </div>
   <div class="wrap">
-    <p class="hero__group">Grupo GiraMundo e Mundo Novo</p>
+    <p class="hero__group"><span class="bands bands--dark" aria-hidden="true"><i></i><i></i></span>Grupo GiraMundo e Mundo Novo</p>
     <h1>Conectando cargas ao que <em>move o Brasil.</em></h1>
     <p class="hero__sub">Transporte com eficiência, segurança e compromisso.</p>
     <div class="hero__cta">
@@ -351,6 +370,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <!-- VALORES -->
 <section class="vals" aria-label="Nossos valores">
   <div class="wrap">
+    <span class="vals__bands" aria-hidden="true"><i></i><i></i></span>
     <ul>
       <li class="rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><div><h3>Eficiência</h3><p>Cada operação planejada de acordo com a necessidade da carga.</p></div></li>
       <li class="rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><div><h3>Segurança</h3><p>Responsabilidade e cuidado em cada etapa do transporte.</p></div></li>
@@ -363,7 +383,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <section class="sec" id="grupo">
   <div class="wrap">
     <div class="grp__head rv">
-      <h2 class="tt"><small>O Grupo</small><span class="ln">Duas transportadoras.</span> <span class="ln">Um&nbsp;só compromisso.</span></h2>
+      <h2 class="tt"><small><span class="bands" aria-hidden="true"><i></i><i></i></span>O Grupo</small><span class="ln">Duas transportadoras.</span> <span class="ln">Um&nbsp;só compromisso.</span></h2>
       <p class="lead">A G2M Log reúne a GiraMundo Transportes e a Mundo Novo Transportes para levar a sua carga com eficiência, segurança e compromisso.</p>
     </div>
     <div class="cos">
@@ -379,14 +399,16 @@ button,input,select,textarea{font:inherit;color:inherit}
           <ul class="co__facts">
             <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>+25 anos de mercado</li>
             <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Av. Paulo César Aranda, 639 – Jardim Riva, Primavera do Leste – MT</li>
+            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a></li>
           </ul>
         </div>
       </article>
       <article class="co rv">
-        <div class="co__img co__img--mn">
-          <img src="assets/logo-mundonovo.png" alt="" loading="lazy">
+        <div class="co__img">
+          <img src="assets/mundonovo-caminhao.jpg" alt="Caminhão da Mundo Novo Transportes" loading="lazy" style="object-position:55% 58%">
         </div>
-        <div class="co__body co__body--mn">
+        <div class="co__body">
+          <span class="co__logo co__logo--fit"><img src="assets/logo-mundonovo.png" alt="Logo Mundo Novo Transportes" loading="lazy"></span>
           <h3>Mundo Novo Transportes</h3>
           <p class="co__tag">Especialistas em transporte de qualidade.</p>
           <p>Temos orgulho em transportar o que faz o Brasil crescer.</p>
@@ -404,10 +426,10 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap svc__grid">
     <div class="svc__photo rv">
       <img src="assets/caminhao-tanque.jpg" alt="Carreta-tanque do grupo na estrada" loading="lazy">
-      <span>Na estrada pelo Brasil</span>
+      <span><i class="bands bands--dark" aria-hidden="true"><i></i><i></i></i>Na estrada pelo Brasil</span>
     </div>
     <div>
-      <h2 class="tt rv"><small>Serviços</small>Soluções em transporte para sua operação</h2>
+      <h2 class="tt rv"><small><span class="bands" aria-hidden="true"><i></i><i></i></span>Serviços</small>Soluções em transporte para sua operação</h2>
       <p class="lead rv">Estrutura e experiência para movimentar aquilo que é importante para o seu negócio.</p>
       <ul class="svc__list">
         <li class="rv"><span class="svc__ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><div><h3>Transporte de cargas</h3><p>Soluções para movimentação de cargas com segurança e responsabilidade.</p></div></li>
@@ -423,7 +445,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <section class="quote" id="cotacao">
   <div class="wrap quote__grid">
     <div class="rv">
-      <h2 class="tt"><small>Cotação</small>Faça uma cotação da sua carga</h2>
+      <h2 class="tt"><small><span class="bands bands--dark" aria-hidden="true"><i></i><i></i></span>Cotação</small>Faça uma cotação da sua carga</h2>
       <p class="lead">Preencha o formulário e a sua solicitação chega pronta no nosso WhatsApp. Se preferir, fale direto com a equipe.</p>
       <ul class="direct">
         <li><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg><div><small>WhatsApp</small><a href="https://wa.me/556630160656?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte." target="_blank" rel="noopener">(66) 3016-0656</a></div></li>
@@ -456,7 +478,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <section class="job" id="trabalhe-conosco">
   <div class="wrap job__grid">
     <div class="rv">
-      <h2 class="tt"><small>Trabalhe Conosco</small>Faça parte da G2M Log</h2>
+      <h2 class="tt"><small><span class="bands" aria-hidden="true"><i></i><i></i></span>Trabalhe Conosco</small>Faça parte da G2M Log</h2>
       <p class="lead">Quer trabalhar com a gente? Envie seu currículo para a nossa equipe. O e-mail já abre pronto, é só anexar o arquivo e enviar.</p>
       <div class="job__cta">
         <a class="btn btn--red" href="mailto:giramundotransportes120@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20G2M%20Log&amp;body=Ol%C3%A1%2C%20equipe%20G2M%20Log%21%0A%0ATenho%20interesse%20em%20trabalhar%20com%20voc%C3%AAs%20e%20envio%20meu%20curr%C3%ADculo%20em%20anexo.%0A%0ANome%3A%0ATelefone/WhatsApp%3A%0ACidade%3A%0A%C3%81rea%20de%20interesse%20%28ex.%3A%20motorista%2C%20administrativo%2C%20manuten%C3%A7%C3%A3o%29%3A%0A%0AObrigado%28a%29%21"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Enviar meu currículo</a>
