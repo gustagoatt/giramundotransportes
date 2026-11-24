@@ -4,533 +4,534 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<meta name="theme-color" content="#161B33">
+<meta name="theme-color" content="#FFFFFF">
 <title>G2M Log | Grupo GiraMundo e Mundo Novo Transportes</title>
-<meta name="description" content="G2M Log: grupo que reúne a GiraMundo Transportes e a Mundo Novo Transportes. Transporte com eficiência, segurança e compromisso. Conectando cargas ao que move o Brasil.">
+<meta name="description" content="G2M Log, grupo da GiraMundo Transportes e da Mundo Novo Transportes. Transporte de grãos e granéis sólidos, logística personalizada e acompanhamento em tempo real. Mais de 25 anos no mercado.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-g2m-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-g2m-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon-g2m.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="G2M Log">
 <meta property="og:title" content="G2M Log | Grupo GiraMundo e Mundo Novo Transportes">
-<meta property="og:description" content="Transporte com eficiência, segurança e compromisso. Conectando cargas ao que move o Brasil.">
-<meta property="og:image" content="assets/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="Conectando cargas ao que move o Brasil. Mais de 25 anos no mercado de transporte rodoviário.">
+<meta property="og:image" content="assets/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"G2M Log","description":"Grupo que reúne a GiraMundo Transportes e a Mundo Novo Transportes.","logo":"assets/logo-g2m.png","telephone":"+55-66-3016-0656","email":"giramundotransportes120@gmail.com","sameAs":["https://www.instagram.com/g2m.log/","https://www.instagram.com/giramundotransportes/","https://www.instagram.com/mundonovotransportes/"],"subOrganization":[{"@type":"Organization","name":"GiraMundo Transportes","sameAs":["https://www.instagram.com/giramundotransportes/"],"address":{"@type":"PostalAddress","streetAddress":"Av. Paulo César Aranda, 639 - Jardim Riva","addressLocality":"Primavera do Leste","addressRegion":"MT","postalCode":"78850-000","addressCountry":"BR"}},{"@type":"Organization","name":"Mundo Novo Transportes","sameAs":["https://www.instagram.com/mundonovotransportes/"]}]}
+{"@context":"https://schema.org","@type":"Organization","name":"G2M Log","description":"Grupo que reúne a GiraMundo Transportes e a Mundo Novo Transportes.","logo":"assets/logo-g2m.png","telephone":"+55-66-3016-0656","email":"giramundotransportes120@gmail.com","foundingDate":"1998","sameAs":["https://www.instagram.com/g2m.log/","https://www.instagram.com/giramundotransportes/","https://www.instagram.com/mundonovotransportes/"]}
 </script>
 <style>
 /* =========================================================
-   G2M Log — grupo GiraMundo + Mundo Novo
-   Vermelho G2M + marinho. Cortes diagonais. Cotação em destaque.
+   G2M Log — versão no estilo do site institucional da GiraMundo
+   Fundo claro, títulos em caixa alta centralizados, cards com borda fina.
+   Cores da G2M: azul-marinho nos títulos, vermelho nos destaques.
    ========================================================= */
 :root{
-  --sk:-18deg;          /* inclinação única de todas as faixas do site */
-  --red:#F13617;        /* vermelho da logo — grandes áreas */
-  --red-ink:#D02A0E;    /* vermelho para botões e textos (contraste com branco) */
-  --navy:#161B33;       /* marinho dos posts */
-  --navy-2:#20264A;
-  --steel:#C6CDD0;      /* cinza-aço das letras da logo */
-  --off:#F4F3F0;
+  --navy:#1B2353;      /* títulos */
+  --red:#D02A0E;       /* botões e destaques (contraste com branco) */
+  --red-2:#F13617;     /* vermelho da logo */
+  --pill:#FDEAE5;      /* fundo dos selos */
+  --bg:#F8F8F8;
+  --card:#F4F4F4;
   --white:#FFFFFF;
-  --text:#1E2235; --muted:#575C73;
-  --line:rgba(22,27,51,.13); --line-w:rgba(255,255,255,.16);
-  --wa:#25D366; --wa-2:#1EB858;
-  --h:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
-  --b:"Barlow","Segoe UI",Arial,sans-serif;
-  --max:1240px; --g:clamp(20px,5vw,60px);
-  --cut:clamp(40px,6vw,90px);
+  --line:#DCDCDC;
+  --text:#2A2A2A;
+  --muted:#6E6E6E;
+  --wa:#25D366;
+  --t:"Roboto","Segoe UI",Arial,sans-serif;
+  --b:"Inter","Segoe UI",Arial,sans-serif;
+  --max:1080px;
+  --g:clamp(20px,4vw,40px);
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;color-scheme:light only}
-html,body{background-color:#FFFFFF!important}
-body{margin:0;font-family:var(--b);font-size:17px;line-height:1.6;color:var(--text);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%;overflow-x:clip;color-scheme:light only}
+html,body{background-color:var(--bg)!important}
+body{margin:0;font-family:var(--b);font-size:16px;line-height:1.65;color:var(--text);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
-h1,h2,h3,h4{font-family:var(--h);margin:0;line-height:1.05;color:var(--navy);letter-spacing:-.01em}
-p{margin:0} ul,ol{margin:0;padding:0;list-style:none} a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--red);outline-offset:3px}
-.ic{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+h1,h2,h3,h4{margin:0;font-family:var(--t);line-height:1.2}
+p{margin:0} ul{margin:0;padding:0;list-style:none} a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--red-2);outline-offset:3px}
+.ic{width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .ic-wa{width:1.2em;height:1.2em;flex:none;fill:currentColor}
 .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--g)}
-.skip{position:absolute;left:12px;top:-60px;z-index:400;background:var(--red-ink);color:#fff;padding:10px 14px;font-weight:700}
-.skip:focus{top:12px}
+.wrap--wide{max-width:1240px}
 
-/* Botões: cantos retos com um chanfro — eco das diagonais */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:16px 28px;border:0;cursor:pointer;font-family:var(--h);font-weight:700;font-size:19px;letter-spacing:.01em;line-height:1;clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%);transition:background .25s var(--ease)}
-.btn--red{background:var(--red-ink);color:#fff}
-.btn--red:hover{background:#B3230A}
+/* Títulos de seção: caixa alta, centralizados, azul */
+.sec{padding-block:clamp(64px,8vw,104px)}
+.sec--white{background:var(--white)}
+.title{text-align:center;color:var(--navy);font-weight:700;font-size:clamp(24px,2.6vw,30px);text-transform:uppercase;letter-spacing:.01em}
+.sub{text-align:center;color:var(--muted);font-weight:300;margin-top:10px}
+.pill{display:table;margin:0 auto 16px;padding:4px 14px;border-radius:999px;background:var(--pill);color:var(--red);font-size:14px;font-weight:500}
+.head{margin-bottom:clamp(36px,5vw,56px)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 24px;border-radius:4px;border:0;background:var(--red);color:#fff;font-family:var(--b);font-weight:500;font-size:16px;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:#B3230A}
+.btn .arrow{transition:transform .2s}
+.btn:hover .arrow{transform:translateX(3px)}
 .btn--wa{background:var(--wa);color:#0C2614}
-.btn--wa:hover{background:var(--wa-2)}
-.btn--line{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
-.btn--line:hover{box-shadow:inset 0 0 0 2px #fff}
+.btn--wa:hover{background:#1EB858}
 
-
-/* ---------- Par de faixas da marca (reutilizável) ---------- */
-.bands{display:inline-flex;gap:5px;flex:none;vertical-align:middle}
-.bands i{display:block;width:16px;height:12px;transform:skewX(var(--sk))}
-.bands i:first-child{background:var(--navy)}
-.bands i:last-child{background:var(--red)}
-.bands--dark i:first-child{background:#fff}
-.bands--big{gap:14px}
-.bands--big i{width:clamp(48px,6vw,90px);height:100%}
+/* Cartão base (borda fina, cantos discretos) */
+.card{background:var(--white);border:1px solid var(--line);border-radius:4px}
+.card--gray{background:var(--card)}
 
 /* ---------- Header ---------- */
-.hd{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .3s var(--ease)}
-.hd.sh{box-shadow:0 8px 28px rgba(22,27,51,.10)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img{width:52px;height:52px}
-.brand span{font-family:var(--h);font-weight:700;font-size:14px;line-height:1.2;color:var(--muted);border-left:1px solid var(--line);padding-left:14px}
-.brand span b{display:block;color:var(--navy);font-size:16px}
-.nav{display:flex;align-items:center;gap:28px}
-.nav ul{display:flex;gap:20px}
-.nav ul a{font-family:var(--h);font-weight:700;font-size:18px;color:var(--navy);padding:26px 0;position:relative}
-.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:16px;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
-.nav ul a:hover::after,.nav ul a.on::after{transform:scaleX(1)}
-.nav .btn{min-height:46px;padding:12px 20px;font-size:17px}
-.burger{display:none;width:46px;height:46px;border:1px solid var(--line);background:#fff;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}
-.burger i{display:block;width:22px;height:2px;background:var(--navy);transition:transform .3s,opacity .3s}
+.hd{position:sticky;top:0;z-index:100;background:var(--white);transition:box-shadow .3s}
+.hd.sh{box-shadow:0 2px 16px rgba(0,0,0,.07)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:50px;height:50px}
+.brand span{font-family:var(--t);font-weight:500;font-size:13px;line-height:1.25;color:var(--muted)}
+.brand span b{display:block;color:var(--navy);font-weight:700;font-size:15px}
+.nav ul{display:flex;gap:clamp(18px,2.4vw,40px)}
+.nav a{font-family:var(--b);font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.02em;color:#8A8A8A;transition:color .2s}
+.nav a:hover,.nav a.on{color:#111}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:4px;background:#fff;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.burger i{display:block;width:20px;height:2px;background:var(--navy);transition:transform .3s,opacity .3s}
 .burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] i:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
-.hero__art{position:absolute;top:0;bottom:0;right:0;left:clamp(0px,(100vw - 1440px) / 2,260px);z-index:-1}
-.hero__photo{position:absolute;top:0;bottom:0;left:52%;right:0;z-index:-2;overflow:hidden;transform:skewX(var(--sk));transform-origin:0 100%}
-.hero__photo img{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;object-fit:cover;object-position:62% 55%;transform:skewX(calc(var(--sk) * -1));transform-origin:0 100%}
-/* Faixas da marca (como na carreta G2M): paralelas à borda da foto (topo 62.56% → base 52%) */
-.hero__band{position:absolute;top:0;bottom:0;z-index:-1;transform:skewX(var(--sk));transform-origin:0 100%;pointer-events:none}
-.hero__band--red{width:clamp(36px,3.4vw,58px);left:calc(52% - 10px - clamp(36px,3.4vw,58px));background:var(--red)}
-.hero__band--white{width:clamp(14px,1.4vw,24px);left:calc(52% - 24px - clamp(36px,3.4vw,58px) - clamp(14px,1.4vw,24px));background:#fff}
-.hero .wrap{position:relative;padding-block:clamp(72px,9vw,132px) clamp(88px,10vw,150px)}
-.hero__group{display:inline-flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:16px;color:var(--steel);margin-bottom:22px}
-.hero__group .bands i{width:14px;height:10px}
-.hero h1{color:#fff;font-weight:800;font-style:italic;font-size:clamp(40px,5vw,72px);line-height:.98;max-width:12ch;text-transform:uppercase;letter-spacing:-.005em}
-.hero h1 em{font-style:italic;color:var(--red);-webkit-text-stroke:0}
-.hero__sub{margin-top:24px;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.82);max-width:34ch}
-.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-
-/* ---------- Faixa de valores ---------- */
-.vals{position:relative;overflow:hidden;background:var(--red);color:#fff;margin-top:calc(var(--cut) * -1);clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);padding-top:calc(var(--cut) + 34px);padding-bottom:42px;z-index:1}
-.vals .wrap{position:relative}
-.vals__bands{position:absolute;right:calc(var(--g) * -1);top:calc(var(--cut) * -1 - 34px);bottom:-42px;display:flex;gap:14px;pointer-events:none}
-.vals__bands i{display:block;width:clamp(30px,3.6vw,56px);transform:skewX(var(--sk))}
-.vals__bands i:first-child{background:var(--navy);width:clamp(40px,4.6vw,72px)}
-.vals__bands i:last-child{background:#fff}
-.vals ul{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr)}
-.vals li{display:flex;gap:18px;align-items:flex-start;padding:6px 28px}
-.vals li:first-child{padding-left:0}
-.vals li+li{border-left:1px solid rgba(255,255,255,.35)}
-.vals .ic{width:40px;height:40px;stroke-width:1.6;margin-top:2px}
-.vals h3{color:#fff;font-weight:800;font-style:italic;font-size:28px;text-transform:uppercase;line-height:1}
-.vals p{margin-top:6px;font-size:16px;color:rgba(255,255,255,.92)}
-
-/* ---------- Títulos de seção ---------- */
-.sec{padding-block:clamp(88px,10vw,140px)}
-.tt{font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(34px,3.8vw,54px);line-height:1}
-.tt small{display:flex;align-items:center;gap:10px;font-style:normal;font-weight:700;font-size:.42em;letter-spacing:.02em;color:var(--red-ink);text-transform:none;margin-bottom:10px}
-.tt .ln{display:block}
-.lead{margin-top:18px;font-size:18px;color:var(--muted);max-width:56ch}
-
-/* ---------- O grupo / empresas ---------- */
-.grp__head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
-.grp__head .lead{margin-top:0}
-.cos{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,28px)}
-.co{position:relative;display:flex;flex-direction:column;background:var(--off);overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 44px),calc(100% - 44px) 100%,0 100%)}
-.co__img{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--navy)}
-.co__img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.co:hover .co__img img{transform:scale(1.03)}
-.co__logo{display:block;width:76px;height:76px;margin:-72px 0 18px;border-radius:50%;background:#fff;box-shadow:0 8px 22px rgba(22,27,51,.25);position:relative;z-index:2}
-.co__logo img{width:100%;height:100%;border-radius:50%}
-.co__logo--fit img{object-fit:contain;padding:9px}
-.co__body{padding:34px 30px 52px;flex:1;display:flex;flex-direction:column}
-.co h3{font-weight:800;font-style:italic;text-transform:uppercase;font-size:30px}
-.co__tag{margin-top:4px;font-family:var(--h);font-weight:700;color:var(--red-ink);font-size:17px}
-.co p{margin-top:14px;color:var(--muted)}
-.co__facts{margin-top:22px;display:grid;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
-.co__facts li{display:flex;gap:10px;align-items:flex-start;font-size:16px;font-weight:500}
-.co__facts .ic{color:var(--red-ink);width:18px;height:18px;margin-top:4px}
-.co__facts a{border-bottom:1px solid var(--line)}
-.co__facts a:hover{border-color:var(--red)}
+.hero{position:relative;background:var(--bg)}
+.hero__img{position:relative;height:clamp(280px,34vw,520px);overflow:hidden}
+.hero__img img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.hero__img::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to bottom,rgba(248,248,248,0),var(--bg))}
+.hero__text{position:relative;margin-top:clamp(-90px,-6vw,-40px);text-align:center;padding-bottom:clamp(56px,7vw,88px)}
+.hero__pill{display:inline-flex;align-items:center;gap:8px;padding:6px 18px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;transition:background .2s}
+.hero__pill:hover{background:var(--red)}
+.hero h1{margin-top:28px;color:var(--navy);font-family:var(--b);font-weight:400;font-size:clamp(30px,4.6vw,58px);line-height:1.15;text-transform:uppercase;letter-spacing:.01em}
+.hero p{margin-top:18px;color:var(--muted);font-size:17px}
+.hero .btn{margin-top:28px}
 
 /* ---------- Serviços ---------- */
-.svc{background:var(--off)}
-.svc__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:stretch}
-.svc__photo{position:relative;min-height:520px;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 60px))}
-.svc__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 50%}
-.svc__photo span .bands{margin-right:12px}
-.svc__photo span .bands i:first-child{background:#fff}
-.svc__photo span .bands i:last-child{background:var(--navy)}
-.svc__photo span{display:flex;align-items:center;position:absolute;left:0;bottom:60px;background:var(--red);color:#fff;font-family:var(--h);font-weight:800;font-style:italic;text-transform:uppercase;font-size:20px;padding:12px 22px 12px 20px}
-.svc__list{margin-top:36px;border-top:2px solid var(--navy)}
-.svc__list li{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
-.svc__ico{display:flex;align-items:center;justify-content:center;width:52px;height:52px;background:var(--navy);color:#fff;clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%)}
-.svc__ico .ic{width:24px;height:24px}
-.svc__list li:hover .svc__ico{background:var(--red-ink)}
-.svc__list h3{font-weight:800;font-size:24px;text-transform:uppercase;font-style:italic}
-.svc__list p{color:var(--muted);font-size:16px;margin-top:4px}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.svc .card{padding:clamp(28px,4vw,52px) clamp(24px,5vw,66px);transition:border-color .25s,box-shadow .25s,transform .25s}
+.svc .card:hover{border-color:#bdbdbd;box-shadow:0 10px 26px rgba(0,0,0,.06);transform:translateY(-2px)}
+.svc h3{font-family:var(--b);font-weight:600;font-size:21px;color:#111}
+.svc p{margin-top:16px;color:var(--muted);font-weight:300;font-size:15px}
 
-/* ---------- Cotação ---------- */
-.quote{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate;clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);margin-top:calc(var(--cut) * -1);padding-block:calc(var(--cut) + clamp(64px,7vw,100px)) clamp(80px,9vw,120px)}
-.quote::before,.quote::after{content:"";position:absolute;top:0;bottom:0;z-index:-1;width:clamp(50px,6vw,96px);transform:skewX(var(--sk));transform-origin:top}
-.quote::before{right:clamp(110px,12vw,200px);background:var(--red)}
-.quote::after{right:clamp(30px,4vw,70px);width:clamp(18px,1.8vw,30px);background:#fff}
-.quote__grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,5vw,80px);align-items:start}
-.quote .tt{color:#fff}
-.quote .tt small{color:var(--red)}
-.quote .lead{color:rgba(255,255,255,.78)}
-.direct{margin-top:40px;display:grid;gap:18px}
-.direct li{display:flex;gap:14px;align-items:center}
-.direct .ic,.direct .ic-wa{width:22px;height:22px;color:var(--red)}
-.direct small{display:block;font-size:13px;color:rgba(255,255,255,.6)}
-.direct a{font-family:var(--h);font-weight:700;font-size:22px;color:#fff}
-.direct a:hover{color:var(--steel)}
-.direct li:has(.ig){align-items:flex-start}
-.direct li:has(.ig)>.ic{margin-top:20px}
-.ig{display:grid;gap:8px;margin-top:2px}
-.direct .ig li{display:flex;flex-direction:column;align-items:flex-start;gap:0}
-.ig span{font-size:13px;color:rgba(255,255,255,.6);line-height:1.2}
-.mail{white-space:nowrap;font-size:clamp(15px,4.2vw,19px)!important}
-.form{background:#fff;color:var(--text);padding:clamp(26px,3vw,40px);clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%)}
-.form h3{font-weight:800;font-style:italic;text-transform:uppercase;font-size:28px}
-.form>p{margin-top:6px;color:var(--muted);font-size:15px}
-.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin-top:22px}
-.fld{display:flex;flex-direction:column;gap:6px}
-.fld--full{grid-column:1/-1}
-.fld label{font-family:var(--h);font-weight:700;font-size:15px;color:var(--navy)}
-.fld label i{font-style:normal;color:var(--red-ink)}
-.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:12px 14px;border:1px solid #C9CCD6;border-radius:0;background:#FAFAFB;font-size:16px;transition:border-color .2s,background .2s}
-.fld textarea{min-height:96px;resize:vertical}
-.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--navy);background:#fff;box-shadow:inset 0 -3px 0 var(--red)}
-.fld.err input,.fld.err select{border-color:var(--red-ink);background:#FFF4F1}
-.form__err{display:none;margin-top:14px;color:var(--red-ink);font-weight:600;font-size:15px}
-.form__err.show{display:block}
-.form .btn{margin-top:20px;width:100%}
-.form__note{margin-top:12px;font-size:13px;color:var(--muted);text-align:center}
+/* ---------- Diferenciais (acordeão) ---------- */
+.dif{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.dif__img{border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.dif__img img{width:100%;aspect-ratio:446/416;object-fit:cover}
+.acc{display:grid;gap:24px}
+.acc__item{border:1px solid var(--line);border-radius:3px;background:var(--white);overflow:hidden}
+.acc__btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;background:var(--white);border:0;text-align:left;font-family:var(--b);font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.02em;color:#222;cursor:pointer;transition:background .25s,color .25s}
+.acc__btn .pm{position:relative;width:14px;height:14px;flex:none}
+.acc__btn .pm::before,.acc__btn .pm::after{content:"";position:absolute;left:0;right:0;top:6px;height:2.5px;background:currentColor;transition:transform .3s}
+.acc__btn .pm::after{transform:rotate(90deg)}
+.acc__item.open .acc__btn{background:var(--red);color:#fff}
+.acc__item.open .pm::after{transform:rotate(0)}
+.acc__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.acc__item.open .acc__panel{grid-template-rows:1fr}
+.acc__panel>div{overflow:hidden}
+.acc__panel p{padding:26px 24px 32px;color:var(--muted);font-weight:300;font-size:15px}
 
+/* ---------- Banner com texto sobre a foto ---------- */
+.banner{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:#111}
+.banner img{width:100%;height:clamp(240px,30vw,370px);object-fit:cover}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0) 35%,rgba(0,0,0,.88) 100%)}
+.banner--low img{height:clamp(220px,25vw,290px)}
+.banner p{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:0 clamp(20px,10vw,150px) clamp(22px,3vw,32px);text-align:center;color:#fff;font-size:clamp(15px,1.4vw,17px);line-height:1.5}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+.thumbs img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:4px;border:1px solid var(--line)}
+
+/* ---------- Empresas do grupo ---------- */
+.cos{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:clamp(40px,5vw,60px)}
+.co{padding:34px 36px 38px}
+.co__logo{width:66px;height:66px;border-radius:50%;border:1px solid var(--line);background:#fff;padding:6px}
+.co__logo img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+.co h3{margin-top:22px;font-family:var(--b);font-weight:600;font-size:23px;color:#111}
+.co p{margin-top:12px;color:var(--muted);font-weight:300}
+.co a{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--red);font-weight:500;font-size:15px}
+.co a:hover{text-decoration:underline}
+
+/* ---------- Palavra do fundador ---------- */
+.founder{position:relative;background:#000;color:#fff;overflow:hidden;border-block:1px solid var(--line)}
+.founder__img{position:absolute;top:0;right:0;bottom:0;width:62%}
+.founder__img img{width:100%;height:100%;object-fit:cover;object-position:30% 30%}
+.founder__img::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.75) 25%,rgba(0,0,0,0) 60%)}
+.founder .wrap{position:relative;z-index:2;padding-block:clamp(64px,8vw,104px)}
+.founder blockquote{margin:0;max-width:430px;font-size:clamp(16px,1.5vw,18px);line-height:1.6}
+.founder cite{display:block;margin-top:34px;font-style:normal}
+.founder cite b{display:block;font-family:var(--t);font-size:18px}
+.founder cite span{font-size:12px;color:rgba(255,255,255,.75)}
+
+/* ---------- Missão, visão, valores ---------- */
+.mvv{display:grid;gap:clamp(40px,6vw,70px)}
+.mvv__row{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.mvv__row .card{display:flex;flex-direction:column;justify-content:center;padding:clamp(30px,5vw,64px) clamp(26px,6vw,74px)}
+.mvv__row h3{font-family:var(--b);font-weight:600;font-size:clamp(26px,2.6vw,32px);color:#111}
+.mvv__row p,.mvv__row li{margin-top:16px;color:var(--muted);font-weight:300;font-size:15px}
+.mvv__row ul{margin-top:10px;padding-left:20px;list-style:disc}
+.mvv__row li{margin-top:6px}
+.mvv__row li::marker{color:var(--red)}
+.mvv__img{border-radius:4px;overflow:hidden;border:1px solid var(--line);min-height:260px}
+.mvv__img img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- Equipe ---------- */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.team img{width:100%;aspect-ratio:520/536;object-fit:cover;border-radius:4px;border:1px solid var(--line);transition:transform .4s var(--ease),filter .4s}
+.team figure{margin:0;overflow:hidden;border-radius:4px}
+.team figure:hover img{transform:scale(1.03)}
+
+/* ---------- Onde atuamos ---------- */
+.regions{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:clamp(56px,7vw,90px)}
+.region{padding:clamp(30px,4vw,52px) clamp(26px,5vw,68px)}
+.region h3{font-family:var(--b);font-weight:600;font-size:clamp(24px,2.4vw,30px);color:#111}
+.region>p{margin-top:20px;color:var(--muted);font-weight:300;font-size:15px}
+.quotebox{margin-top:26px;padding:26px 26px 30px;background:var(--card);border:1px solid #CFCFCF;border-radius:2px}
+.quotebox h4{font-family:var(--b);font-weight:600;font-size:24px;color:#111}
+.quotebox small{display:block;margin-top:10px;font-size:17px;color:#444}
+.quotebox a{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:var(--red);font-weight:500;font-size:15px}
+.quotebox a:hover{text-decoration:underline}
+
+/* ---------- Clientes ---------- */
+.rule{height:1px;background:var(--line);margin-block:clamp(48px,6vw,80px)}
+.logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(28px,4vw,48px) clamp(26px,4vw,56px)}
+.logos img{flex:0 0 auto;max-width:150px}
+.logos img{max-width:min(150px,100%);max-height:56px;width:auto;height:auto;transition:filter .3s,opacity .3s,transform .3s}
+/* computador: cinza, colorido ao passar o mouse | celular: sempre colorido */
+@media (hover:hover){
+  .logos img{filter:grayscale(1);opacity:.6}
+  .logos img:hover{filter:none;opacity:1;transform:scale(1.06)}
+}
+
+/* ---------- Fale conosco ---------- */
+.talk{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding:clamp(28px,4vw,46px) clamp(24px,4vw,40px)}
+.talk__logo{width:62px;height:62px;border-radius:50%;border:1px solid var(--line);background:#fff;padding:7px}
+.talk h3{margin-top:24px;font-family:var(--b);font-weight:600;font-size:clamp(26px,2.6vw,32px);color:#111}
+.talk p{margin-top:18px;color:var(--muted);font-weight:300}
+.talk .btn{margin-top:28px}
+.talk__img{border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.talk__img img{width:100%;aspect-ratio:462/281;object-fit:cover;filter:grayscale(1)}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.contacts .card{padding:24px 26px}
+.contacts h4{font-family:var(--b);font-weight:600;font-size:16px;color:#111;display:flex;align-items:center;gap:10px}
+.contacts h4 .ic,.contacts h4 .ic-wa{color:var(--red)}
+.contacts ul{margin-top:12px;display:grid;gap:6px}
+.contacts a{color:var(--red);font-size:15px;white-space:nowrap}
+.contacts a:hover{text-decoration:underline}
 
 /* ---------- Trabalhe conosco ---------- */
-.job{position:relative;background:var(--off);padding-block:clamp(88px,10vw,140px);overflow:hidden;isolation:isolate}
-.job::before,.job::after{content:"";position:absolute;top:0;bottom:0;z-index:-1;width:clamp(60px,7vw,110px);transform:skewX(var(--sk));transform-origin:bottom}
-.job::before{right:clamp(130px,13vw,230px);background:var(--navy)}
-.job::after{right:clamp(20px,3vw,60px);background:var(--red)}
-.job__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,80px);align-items:center}
-.job__cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:32px}
-.job__cta .btn .ic{width:22px;height:22px}
-.job__alt{font-weight:600;font-size:15px;color:var(--navy);border-bottom:1px solid var(--line)}
-.job__alt:hover{border-color:var(--red)}
-.job__mail{margin-top:18px;font-size:15px;color:var(--muted)}
-.job__mail b{color:var(--navy)}
-.job__steps{background:#fff;padding:clamp(24px,3vw,36px);display:grid;gap:22px;box-shadow:0 18px 44px rgba(22,27,51,.12);clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%)}
-.job__steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
-.job__steps li+li{padding-top:22px;border-top:1px solid var(--line)}
-.job__steps span{display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:var(--navy);color:#fff;font-family:var(--h);font-weight:800;font-style:italic;font-size:22px}
-.job__steps span{transition:background .35s var(--ease),transform .35s var(--ease)}
-.job__steps li{cursor:default}
-.job__steps li.on span{background:var(--red-ink);transform:scale(1.08)}
-.job__steps li h3{transition:color .35s var(--ease)}
-.job__steps li.on h3{color:var(--red-ink)}
-.job__steps h3{font-size:21px;font-weight:800}
-.job__steps p{margin-top:4px;color:var(--muted);font-size:16px}
+.job{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:26px clamp(24px,4vw,40px)}
+.job h4{font-family:var(--b);font-weight:600;font-size:20px;color:#111}
+.job p{margin-top:6px;color:var(--muted);font-weight:300;font-size:15px}
 
 /* ---------- Rodapé ---------- */
-.ft{position:relative;overflow:hidden;background:#0E1126;color:rgba(255,255,255,.68);font-size:15px}
-.ft::before,.ft::after{content:"";position:absolute;top:0;height:8px;transform:skewX(var(--sk))}
-.ft::before{left:0;width:38%;background:var(--red)}
-.ft::after{left:calc(38% + 10px);width:14%;background:#fff}
-.ft__top{display:grid;grid-template-columns:1.2fr .8fr 1fr 1.35fr;gap:36px;padding-block:64px 48px}
-.ft__brand img{width:64px;height:64px}
-.ft__brand p{margin-top:16px;font-family:var(--h);font-weight:700;font-style:italic;text-transform:uppercase;color:#fff;font-size:20px;line-height:1.15;max-width:18ch}
-.ft h4{color:#fff;font-size:17px;font-weight:800;text-transform:uppercase;font-style:italic;margin-bottom:14px}
-.ft ul{display:grid;gap:9px}
-.ft a:hover{color:#fff}
-.ft__mail{white-space:nowrap;font-size:14.5px}
-.ft h4.ft__ig{margin-top:24px}
-.ft__bottom{border-top:1px solid rgba(255,255,255,.1);padding-block:20px;font-size:13px;color:rgba(255,255,255,.45)}
+.ft{background:#050505;color:#fff;font-size:15px}
+.ft__top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-block:64px 48px}
+.ft__brand img{width:58px;height:58px}
+.ft__brand p{margin-top:30px;color:#9A9A9A;font-size:14px;line-height:1.7;max-width:30ch}
+.ft h4{font-family:var(--b);font-weight:600;font-size:17px;margin-bottom:18px}
+.ft ul{display:grid;gap:12px}
+.ft a{color:#E6E6E6;transition:color .2s}
+.ft a:hover{color:var(--red-2)}
+.ft__mail{white-space:nowrap;font-size:14px}
+.ft__bottom{border-top:1px solid #2a2a2a;padding-block:22px 28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#9A9A9A;font-size:13px}
 
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:150;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(37,211,102,.45);transition:transform .25s var(--ease)}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:150;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:transform .25s}
 .wa-float:hover{transform:scale(1.06)}
 .wa-float .ic-wa{width:30px;height:30px}
 
-.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.acc__panel{transition:none}}
 
 /* =========================================================
    Responsivo
    ========================================================= */
-@media (max-width:1500px) and (min-width:961px){
-  .hero__cta{flex-direction:column;align-items:flex-start}
-}
-@media (max-width:1100px){
-  .nav ul{gap:14px}.nav ul a{font-size:16px}
-  .brand span{display:none}
-}
 @media (max-width:960px){
-  /* cabeçalho escuro no celular, contínuo com o hero */
-  .hd{background:var(--navy);border-bottom-color:rgba(255,255,255,.1)}
-  .hd.sh{box-shadow:0 8px 24px rgba(0,0,0,.35)}
-  .brand span{display:block;color:rgba(255,255,255,.7);border-left-color:rgba(255,255,255,.2);font-size:13px;padding-left:12px}
-  .brand span b{color:#fff;font-size:15px}
-  .burger{background:transparent;border-color:rgba(255,255,255,.3)}
-  .burger i{background:#fff}
-  .hd .nav{background:var(--navy);border-bottom-color:rgba(255,255,255,.1)}
-  .hd .nav ul a{color:#fff;border-bottom-color:rgba(255,255,255,.12)}
-  /* faixas fora do texto */
-  .vals__bands{display:none}
-  .quote::before,.quote::after{bottom:auto;height:calc(var(--cut) + 36px)}
-  .hd .wrap{height:70px}
-  .brand img{width:46px;height:46px}
+  .hd .wrap{height:72px}
   .burger{display:flex}
-  .nav{position:fixed;top:70px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px var(--g) 24px;border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(22,27,51,.14);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s,transform .25s,visibility 0s .25s}
+  .nav{position:fixed;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 16px 26px rgba(0,0,0,.08);padding:4px var(--g) 18px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s,transform .25s,visibility 0s .25s}
   .nav.open{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .25s}
   .nav ul{flex-direction:column;gap:0}
-  .nav ul a{display:block;padding:15px 0;font-size:20px;border-bottom:1px solid var(--line)}
-  .nav ul a::after{display:none}
-  .nav .btn{margin-top:18px;width:100%}
-
-  .hero__photo{position:relative;left:auto;right:auto;width:100%;height:56vw;max-height:440px;transform:none;clip-path:polygon(0 0,100% 0,100% 82%,0 100%)}
-  .hero__photo img{left:0;transform:none;object-position:62% 55%}
-  .hero__band{display:none}
-  .hero__art{position:static}
-  .hero .wrap{padding-top:40px}
-  .vals ul{grid-template-columns:1fr;gap:22px}
-  .vals li,.vals li:first-child{padding:0}
-  .vals li+li{border-left:0;border-top:1px solid rgba(255,255,255,.35);padding-top:22px}
-
-  .grp__head{grid-template-columns:minmax(0,1fr);gap:0}
-  .grp__head .lead{margin-top:18px}
-  .cos{grid-template-columns:1fr}
-  .svc__grid{grid-template-columns:1fr}
-  .svc__photo{min-height:340px}
-  .quote__grid{grid-template-columns:minmax(0,1fr)}
-  .job__grid{grid-template-columns:1fr}
-  .job::before,.job::after{top:auto;height:160px}
+  .nav a{display:block;padding:14px 0;border-bottom:1px solid #eee;font-size:15px}
+  .dif,.mvv__row,.talk{grid-template-columns:1fr}
+  .mvv__row--rev .mvv__img{order:-1}
+  .regions,.cos{grid-template-columns:1fr}
+  .contacts{grid-template-columns:1fr 1fr}
+  .founder__img{position:relative;width:100%;height:320px}
+  .founder__img::before{background:linear-gradient(0deg,#000 0%,rgba(0,0,0,0) 45%)}
+  .founder .wrap{padding-top:10px}
   .ft__top{grid-template-columns:1fr 1fr}
   .ft__brand{grid-column:1/-1}
 }
 @media (max-width:600px){
-  body{font-size:16px}
-  .hero h1{font-size:clamp(34px,11vw,50px)}
-  .tt{font-size:clamp(27px,8.6vw,40px);overflow-wrap:break-word}
-  .hero__cta{flex-direction:column}
-  .hero__cta .btn{width:100%}
-  .co__body{padding:30px 22px 52px}
-  .form__grid{grid-template-columns:1fr}
-  .job__cta .btn{width:100%}
-  .job::before,.job::after{display:none}
-  .ft__top{grid-template-columns:1fr;gap:28px}
-  .wa-float{right:16px;bottom:16px;width:56px;height:56px}
+  .brand span{display:none}
+  .svc{grid-template-columns:1fr}
+  .thumbs{grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .team{grid-template-columns:1fr;gap:14px}
+  .team img{aspect-ratio:4/3;object-position:50% 25%}
+  .logos img{max-height:42px;max-width:120px}
+  .contacts{grid-template-columns:1fr}
+  .banner::after{display:none}
+  .banner img,.banner--low img{height:210px}
+  .banner p{position:static;padding:18px 20px 22px;background:#111;text-align:left;font-size:15px}
+  .hero__pill{font-size:13px;padding:6px 14px}
+  .ft__top{grid-template-columns:1fr;gap:30px}
+  .wa-float{right:16px;bottom:16px;width:54px;height:54px}
 }
 @media (max-width:380px){
-  .tt{font-size:clamp(24px,7.6vw,30px)}
-  .direct a{font-size:19px}
-  .mail{font-size:13.5px!important}
+  .contacts a{font-size:13.5px}
 }
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
 
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
-
 <header class="hd" id="hd">
   <div class="wrap">
-    <a href="#inicio" class="brand" aria-label="G2M Log – início">
-      <img src="assets/logo-g2m.png" alt="Logo G2M Log" width="52" height="52">
+    <a href="#home" class="brand" aria-label="G2M Log – início">
+      <img src="assets/logo-g2m.png" alt="Logo G2M Log" width="50" height="50">
       <span><b>Grupo G2M Log</b>GiraMundo e Mundo Novo</span>
     </a>
     <nav class="nav" id="nav" aria-label="Navegação principal">
       <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#grupo">O Grupo</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#quem-somos">Quem somos</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#cotacao">Cotação</a></li>
-        <li><a href="#trabalhe-conosco">Trabalhe Conosco</a></li>
+        <li><a href="#onde-atuamos">Onde atuamos</a></li>
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <a class="btn btn--red" href="#cotacao">Solicitar cotação</a>
     </nav>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
   </div>
 </header>
 
-<main id="conteudo">
+<main>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero__art">
-  <div class="hero__photo" aria-hidden="true"><img src="assets/frota-giramundo.jpg" alt="" fetchpriority="high"></div>
-  <span class="hero__band hero__band--white" aria-hidden="true"></span>
-  <span class="hero__band hero__band--red" aria-hidden="true"></span>
-  </div>
-  <div class="wrap">
-    <p class="hero__group"><span class="bands bands--dark" aria-hidden="true"><i></i><i></i></span>Grupo GiraMundo e Mundo Novo</p>
-    <h1>Conectando cargas ao que <em>move o Brasil.</em></h1>
-    <p class="hero__sub">Transporte com eficiência, segurança e compromisso.</p>
-    <div class="hero__cta">
-      <a class="btn btn--red" href="#cotacao">Solicitar cotação</a>
-      <a class="btn btn--wa" href="https://wa.me/556630160656?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte." target="_blank" rel="noopener"><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg>Falar no WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- VALORES -->
-<section class="vals" aria-label="Nossos valores">
-  <div class="wrap">
-    <span class="vals__bands" aria-hidden="true"><i></i><i></i></span>
-    <ul>
-      <li class="rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><div><h3>Eficiência</h3><p>Cada operação planejada de acordo com a necessidade da carga.</p></div></li>
-      <li class="rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><div><h3>Segurança</h3><p>Responsabilidade e cuidado em cada etapa do transporte.</p></div></li>
-      <li class="rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg><div><h3>Compromisso</h3><p>Atendimento próximo, do primeiro contato à entrega.</p></div></li>
-    </ul>
-  </div>
-</section>
-
-<!-- O GRUPO -->
-<section class="sec" id="grupo">
-  <div class="wrap">
-    <div class="grp__head rv">
-      <h2 class="tt"><small><span class="bands" aria-hidden="true"><i></i><i></i></span>O Grupo</small><span class="ln">Duas transportadoras.</span> <span class="ln">Um&nbsp;só compromisso.</span></h2>
-      <p class="lead">A G2M Log reúne a GiraMundo Transportes e a Mundo Novo Transportes para levar a sua carga com eficiência, segurança e compromisso.</p>
-    </div>
-    <div class="cos">
-      <article class="co rv">
-        <div class="co__img">
-          <img src="assets/frota-giramundo.jpg" alt="Caminhões da GiraMundo Transportes" loading="lazy">
-        </div>
-        <div class="co__body">
-          <span class="co__logo"><img src="assets/logo-giramundo.png" alt="Logo GiraMundo Transportes" loading="lazy"></span>
-          <h3>GiraMundo Transportes</h3>
-          <p class="co__tag">Mais que sua carga, transportamos a sua marca.</p>
-          <p>Há mais de 25 anos no mercado de transportes, com compromisso, experiência e qualidade em cada operação.</p>
-          <ul class="co__facts">
-            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>+25 anos de mercado</li>
-            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Av. Paulo César Aranda, 639 – Jardim Riva, Primavera do Leste – MT</li>
-            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a></li>
-          </ul>
-        </div>
-      </article>
-      <article class="co rv">
-        <div class="co__img">
-          <img src="assets/mundonovo-caminhao.jpg" alt="Caminhão da Mundo Novo Transportes" loading="lazy" style="object-position:55% 58%">
-        </div>
-        <div class="co__body">
-          <span class="co__logo co__logo--fit"><img src="assets/logo-mundonovo.png" alt="Logo Mundo Novo Transportes" loading="lazy"></span>
-          <h3>Mundo Novo Transportes</h3>
-          <p class="co__tag">Especialistas em transporte de qualidade.</p>
-          <p>Temos orgulho em transportar o que faz o Brasil crescer.</p>
-          <ul class="co__facts">
-            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a></li>
-          </ul>
-        </div>
-      </article>
-    </div>
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="hero__img"><img src="assets/hero.jpg" alt="Carreta da GiraMundo na rodovia" fetchpriority="high"></div>
+  <div class="wrap hero__text">
+    <a class="hero__pill" href="#quem-somos">Há mais de 25 anos no mercado — Saiba mais <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <h1>Conectando cargas<br>ao que move o Brasil!</h1>
+    <p>Transporte com eficiência, segurança e compromisso.</p>
+    <a class="btn" href="https://wa.me/556630160656?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20frete." target="_blank" rel="noopener">Solicitar cotação <span class="arrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
   </div>
 </section>
 
 <!-- SERVIÇOS -->
-<section class="sec svc" id="servicos">
-  <div class="wrap svc__grid">
-    <div class="svc__photo rv">
-      <img src="assets/caminhao-tanque.jpg" alt="Carreta-tanque do grupo na estrada" loading="lazy">
-      <span><i class="bands bands--dark" aria-hidden="true"><i></i><i></i></i>Na estrada pelo Brasil</span>
-    </div>
-    <div>
-      <h2 class="tt rv"><small><span class="bands" aria-hidden="true"><i></i><i></i></span>Serviços</small>Soluções em transporte para sua operação</h2>
-      <p class="lead rv">Estrutura e experiência para movimentar aquilo que é importante para o seu negócio.</p>
-      <ul class="svc__list">
-        <li class="rv"><span class="svc__ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><div><h3>Transporte de cargas</h3><p>Soluções para movimentação de cargas com segurança e responsabilidade.</p></div></li>
-        <li class="rv"><span class="svc__ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span><div><h3>Transporte especializado</h3><p>Operações planejadas de acordo com as necessidades de cada carga.</p></div></li>
-        <li class="rv"><span class="svc__ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg></span><div><h3>Logística e movimentação</h3><p>Suporte para manter sua operação em movimento com eficiência.</p></div></li>
-        <li class="rv"><span class="svc__ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span><div><h3>Atendimento personalizado</h3><p>Contato próximo para entender as necessidades de cada cliente.</p></div></li>
-      </ul>
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <div class="head rv"><h2 class="title">Principais serviços</h2></div>
+    <div class="svc">
+      <article class="card rv"><h3>Transporte de grãos em geral</h3><p>Transportamos uma ampla variedade de grãos, garantindo que suas safras cheguem ao destino final com segurança e rapidez.</p></article>
+      <article class="card rv"><h3>Transporte de granéis sólidos</h3><p>Contamos com uma frota especializada para o transporte de cal e cimento (a granel e paletizado), garantindo entregas pontuais e seguras para atender às suas necessidades de construção.</p></article>
+      <article class="card rv"><h3>Logística personalizada</h3><p>Oferecemos soluções de logística sob medida, adaptadas às necessidades específicas de cada cliente. Desde o planejamento até a entrega, cuidamos de cada detalhe para garantir uma operação eficiente e sem problemas.</p></article>
+      <article class="card rv"><h3>Acompanhamento em tempo real</h3><p>Nosso sistema de rastreamento permite que você acompanhe suas remessas em tempo real, garantindo total visibilidade e controle em cada etapa do processo de transporte.</p></article>
     </div>
   </div>
 </section>
 
-<!-- COTAÇÃO -->
-<section class="quote" id="cotacao">
-  <div class="wrap quote__grid">
-    <div class="rv">
-      <h2 class="tt"><small><span class="bands bands--dark" aria-hidden="true"><i></i><i></i></span>Cotação</small>Faça uma cotação da sua carga</h2>
-      <p class="lead">Preencha o formulário e a sua solicitação chega pronta no nosso WhatsApp. Se preferir, fale direto com a equipe.</p>
-      <ul class="direct">
-        <li><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg><div><small>WhatsApp</small><a href="https://wa.me/556630160656?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte." target="_blank" rel="noopener">(66) 3016-0656</a></div></li>
-        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><small>Telefone</small><a href="tel:+556630160656">(66) 3016-0656</a></div></li>
-        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div><small>E-mail</small><a class="mail" href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></div></li>
-        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><div><small>Instagram</small><ul class="ig"><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a><span>G2M Log</span></li><li><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a><span>GiraMundo Transportes</span></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a><span>Mundo Novo Transportes</span></li></ul></div></li>
-      </ul>
-    </div>
-
-    <form class="form rv" id="quoteForm" novalidate>
-      <h3>Solicitar cotação</h3>
-      <p>Campos com <b style="color:var(--red-ink)">*</b> são obrigatórios.</p>
-      <div class="form__grid">
-        <div class="fld"><label for="q-nome">Nome <i>*</i></label><input id="q-nome" name="nome" autocomplete="name" required></div>
-        <div class="fld"><label for="q-emp">Empresa</label><input id="q-emp" name="empresa" autocomplete="organization"></div>
-        <div class="fld"><label for="q-tel">Telefone <i>*</i></label><input id="q-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required></div>
-        <div class="fld"><label for="q-carga">Tipo de carga <i>*</i></label><input id="q-carga" name="carga" required placeholder="Ex.: grãos, líquidos, carga seca"></div>
-        <div class="fld"><label for="q-orig">Origem <i>*</i></label><input id="q-orig" name="origem" required placeholder="Cidade – UF"></div>
-        <div class="fld"><label for="q-dest">Destino <i>*</i></label><input id="q-dest" name="destino" required placeholder="Cidade – UF"></div>
-        <div class="fld fld--full"><label for="q-msg">Detalhes da carga</label><textarea id="q-msg" name="detalhes" placeholder="Peso ou volume, data prevista e outras informações"></textarea></div>
+<!-- DIFERENCIAIS -->
+<section class="sec" id="diferenciais" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><h2 class="title">Nossos diferenciais</h2></div>
+    <div class="dif">
+      <div class="dif__img rv"><img src="assets/estrada.jpg" alt="Caminhão do grupo na rodovia" loading="lazy"></div>
+      <div class="acc rv" id="acc">
+        <div class="acc__item open">
+          <button class="acc__btn" aria-expanded="true" aria-controls="d1" id="b1">Agilidade e eficiência<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc__panel" id="d1" role="region" aria-labelledby="b1"><div><p>No Grupo G2M Log, entendemos a importância de mover-se rapidamente no mundo dos negócios. Nossa equipe é ágil e eficiente, garantindo que suas cargas cheguem ao destino final no menor tempo possível, sem comprometer a qualidade ou a segurança.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" aria-expanded="false" aria-controls="d2" id="b2">Logística sob medida<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc__panel" id="d2" role="region" aria-labelledby="b2"><div><p>Oferecemos soluções logísticas personalizadas que se adaptam às necessidades específicas de cada cliente. Desde o planejamento até a execução, nossa equipe está preparada para criar estratégias que otimizam os processos e garantem a entrega perfeita. Seja qual for o desafio, nossa abordagem sob medida garante que cada detalhe seja atendido com precisão.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" aria-expanded="false" aria-controls="d3" id="b3">Acompanhamento<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc__panel" id="d3" role="region" aria-labelledby="b3"><div><p>A transparência é um valor central em nosso serviço. Utilizamos tecnologia para oferecer rastreamento em tempo real de todas as cargas, permitindo que nossos clientes acompanhem cada etapa do transporte. Este acompanhamento contínuo proporciona tranquilidade e confiança, sabendo que sua carga está sempre monitorada e em boas mãos.</p></div></div>
+        </div>
       </div>
-      <p class="form__err" id="formErr" role="alert">Preencha os campos obrigatórios destacados.</p>
-      <button class="btn btn--wa" type="submit"><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg>Enviar cotação pelo WhatsApp</button>
-      <p class="form__note">O WhatsApp abre com a mensagem pronta. É só tocar em enviar.</p>
-    </form>
+    </div>
   </div>
 </section>
 
-<!-- TRABALHE CONOSCO -->
-<section class="job" id="trabalhe-conosco">
-  <div class="wrap job__grid">
-    <div class="rv">
-      <h2 class="tt"><small><span class="bands" aria-hidden="true"><i></i><i></i></span>Trabalhe Conosco</small>Faça parte da G2M Log</h2>
-      <p class="lead">Quer trabalhar com a gente? Envie seu currículo para a nossa equipe. O e-mail já abre pronto, é só anexar o arquivo e enviar.</p>
-      <div class="job__cta">
-        <a class="btn btn--red" href="mailto:giramundotransportes120@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20G2M%20Log&amp;body=Ol%C3%A1%2C%20equipe%20G2M%20Log%21%0A%0ATenho%20interesse%20em%20trabalhar%20com%20voc%C3%AAs%20e%20envio%20meu%20curr%C3%ADculo%20em%20anexo.%0A%0ANome%3A%0ATelefone/WhatsApp%3A%0ACidade%3A%0A%C3%81rea%20de%20interesse%20%28ex.%3A%20motorista%2C%20administrativo%2C%20manuten%C3%A7%C3%A3o%29%3A%0A%0AObrigado%28a%29%21"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Enviar meu currículo</a>
-        <a class="job__alt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=giramundotransportes120@gmail.com&amp;su=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20G2M%20Log&amp;body=Ol%C3%A1%2C%20equipe%20G2M%20Log%21%0A%0ATenho%20interesse%20em%20trabalhar%20com%20voc%C3%AAs%20e%20envio%20meu%20curr%C3%ADculo%20em%20anexo.%0A%0ANome%3A%0ATelefone/WhatsApp%3A%0ACidade%3A%0A%C3%81rea%20de%20interesse%20%28ex.%3A%20motorista%2C%20administrativo%2C%20manuten%C3%A7%C3%A3o%29%3A%0A%0AObrigado%28a%29%21" target="_blank" rel="noopener">Usa Gmail no computador? Abrir no Gmail</a>
-      </div>
-      <p class="job__mail">Ou envie para <b style="white-space:nowrap">giramundotransportes120@gmail.com</b></p>
+<!-- QUEM SOMOS -->
+<section class="sec sec--white" id="quem-somos">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">G2M Log</span><h2 class="title">Conheça o grupo</h2></div>
+    <div class="banner banner--low rv">
+      <img src="assets/historia.jpg" alt="Fundador mostrando fotos antigas da empresa" loading="lazy" style="object-position:70% 50%">
+      <p>Desde 1998, a GiraMundo Transportes tem sido uma presença confiável e respeitada no mercado de transporte rodoviário. Hoje, ao lado da Mundo Novo Transportes, forma o Grupo G2M Log.</p>
     </div>
-    <ol class="job__steps rv">
-      <li><span>1</span><div><h3>Clique em "Enviar meu currículo"</h3><p>O seu e-mail abre com o destinatário, o assunto e a mensagem já preenchidos.</p></div></li>
-      <li><span>2</span><div><h3>Complete seus dados e anexe o currículo</h3><p>Preencha nome, telefone, cidade e área de interesse. Anexe o arquivo em PDF ou Word.</p></div></li>
-      <li><span>3</span><div><h3>Envie</h3><p>Nossa equipe recebe o seu currículo e entra em contato se houver uma vaga para o seu perfil.</p></div></li>
-    </ol>
+    <div class="thumbs rv">
+      <img src="assets/historia-1.jpg" alt="Comemoração de 20 anos da GiraMundo" loading="lazy">
+      <img src="assets/historia-2.jpg" alt="Motoristas do grupo em frente aos caminhões" loading="lazy">
+      <img src="assets/historia-3.jpg" alt="Cavalo mecânico ao pôr do sol" loading="lazy">
+    </div>
+
+    <div class="cos">
+      <article class="card card--gray co rv">
+        <span class="co__logo" style="display:block"><img src="assets/logo-giramundo.png" alt="Logo GiraMundo Transportes" loading="lazy"></span>
+        <h3>GiraMundo Transportes</h3>
+        <p>Desde 1998 no transporte rodoviário. Mais do que a sua carga, nós transportamos a sua marca!</p>
+        <a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>@giramundotransportes</a>
+      </article>
+      <article class="card card--gray co rv">
+        <span class="co__logo" style="display:block"><img src="assets/logo-mundonovo.png" alt="Logo Mundo Novo Transportes" loading="lazy"></span>
+        <h3>Mundo Novo Transportes</h3>
+        <p>Especialistas em transporte de qualidade. Temos orgulho em transportar o que faz o Brasil crescer!</p>
+        <a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>@mundonovotransportes</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PALAVRA DO FUNDADOR -->
+<section class="sec" style="padding-bottom:0">
+  <div class="head rv" style="margin-bottom:clamp(30px,4vw,48px)"><h2 class="title">Palavra do fundador</h2></div>
+</section>
+<section class="founder" aria-label="Palavra do fundador">
+  <div class="founder__img"><img src="assets/fundador.jpg" alt="Bebeto, fundador da GiraMundo Transportes" loading="lazy"></div>
+  <div class="wrap">
+    <blockquote class="rv">Na GiraMundo Transportes, compreendemos a importância de cada carga e a confiança que você deposita em nós. É por isso que nos esforçamos para oferecer mais do que apenas um serviço de transporte, oferecemos parceria. Com nossa expertise e compromisso, construímos pontes que duram além das estradas.
+      <cite><b>Bebeto</b><span>Fundador, GiraMundo Transportes</span></cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- MISSÃO / VISÃO / VALORES -->
+<section class="sec sec--white">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">G2M Log</span><h2 class="title">Descubra mais</h2></div>
+    <div class="mvv">
+      <div class="mvv__row rv">
+        <article class="card card--gray"><h3>Missão</h3><p>No Grupo G2M Log, não apenas transportamos mercadorias; nós impulsionamos marcas. Cada entrega representa uma oportunidade para demonstrar nossa dedicação à precisão, ao cuidado e à integridade em cada movimento que fazemos.</p></article>
+        <div class="mvv__img"><img src="assets/missao.jpg" alt="Mecânico do grupo na oficina" loading="lazy"></div>
+      </div>
+      <div class="mvv__row mvv__row--rev rv">
+        <div class="mvv__img"><img src="assets/visao.jpg" alt="Soldador trabalhando na oficina" loading="lazy"></div>
+        <article class="card card--gray"><h3>Visão</h3><p>Nossa visão é simples: construir relacionamentos sólidos e duradouros com nossos clientes, baseados na confiança mútua e no compromisso com resultados excepcionais. Estamos aqui para ser seu parceiro de confiança em todas as suas necessidades logísticas.</p></article>
+      </div>
+      <div class="mvv__row rv">
+        <article class="card card--gray"><h3>Valores</h3>
+          <ul><li>Compromisso com a excelência</li><li>Integridade em cada interação</li><li>Foco no cliente em tudo o que fazemos</li><li>Inovação constante para enfrentar desafios</li></ul>
+        </article>
+        <div class="mvv__img"><img src="assets/valores.jpg" alt="Diretores segurando a miniatura de um caminhão do grupo" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="sec" id="equipe">
+  <div class="head rv"><h2 class="title">Nossa equipe</h2></div>
+  <div class="wrap wrap--wide">
+    <div class="team">
+      <figure class="rv"><img src="assets/equipe-1.jpg" alt="Fundador do grupo" loading="lazy"></figure>
+      <figure class="rv"><img src="assets/equipe-2.jpg" alt="Diretor em frente aos caminhões da Mundo Novo" loading="lazy"></figure>
+      <figure class="rv"><img src="assets/equipe-3.jpg" alt="Profissional da manutenção com máscara de solda" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE ATUAMOS -->
+<section class="sec sec--white" id="onde-atuamos">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">G2M Log</span><h2 class="title">Onde atuamos</h2></div>
+    <div class="banner rv">
+      <img src="assets/onde-atuamos.jpg" alt="Caminhão do grupo na estrada" loading="lazy" style="object-position:85% 50%">
+      <p>Atendemos uma vasta área geográfica para garantir que suas cargas cheguem aonde precisam estar. Nosso alcance abrange diversas regiões do Brasil, permitindo-nos oferecer serviços de transporte eficientes e confiáveis para uma ampla gama de clientes.</p>
+    </div>
+    <div class="regions">
+      <article class="card region rv">
+        <h3>Centro-Oeste</h3>
+        <p>Atuamos intensivamente na região Centro-Oeste, que é uma área crucial para nossa operação devido à sua importância agrícola e industrial. Nossa expertise na logística desta região nos permite oferecer um serviço ágil e eficiente, garantindo que suas mercadorias sejam entregues com precisão.</p>
+        <div class="quotebox"><h4>Cotação de frete!</h4><small>Região Centro-Oeste:</small><a href="https://wa.me/556630160656?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20frete%20para%20a%20regi%C3%A3o%20Centro-Oeste." target="_blank" rel="noopener"><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg>Solicitar pelo WhatsApp</a></div>
+      </article>
+      <article class="card region rv">
+        <h3>Norte e Nordeste</h3>
+        <p>Nossas operações abrangem as vastas regiões Norte e Nordeste, superando os desafios logísticos únicos dessas áreas. Estamos comprometidos em oferecer entregas pontuais e seguras, apoiando o crescimento econômico dessas regiões com soluções de transporte adaptadas às necessidades de nossos clientes.</p>
+        <div class="quotebox"><h4>Cotação de frete!</h4><small>Região Norte e Nordeste:</small><a href="https://wa.me/556630160656?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20frete%20para%20a%20regi%C3%A3o%20Norte/Nordeste." target="_blank" rel="noopener"><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg>Solicitar pelo WhatsApp</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section class="sec" id="clientes">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">G2M Log</span><h2 class="title">Parcerias de sucesso</h2></div>
+    <div class="banner rv">
+      <img src="assets/parcerias.jpg" alt="Motorista do grupo ao lado de um caminhão GiraMundo" loading="lazy" style="object-position:62% 40%">
+      <p>No Grupo G2M Log, temos o orgulho de atender algumas das maiores e mais respeitadas empresas do Brasil. Nossa dedicação à excelência e ao serviço de qualidade nos permitiu construir parcerias duradouras com líderes de diversos setores.</p>
+    </div>
+    <div class="rule"></div>
+    <div class="head rv"><h2 class="title">Nossos clientes</h2><p class="sub">Confira abaixo alguns de nossos clientes</p></div>
+    <div class="logos rv">
+      <img src="assets/cliente-sanches-tripoloni.png" alt="Sanches Tripoloni" loading="lazy">
+      <img src="assets/cliente-agricola-alvorada.png" alt="Agrícola Alvorada" loading="lazy">
+      <img src="assets/cliente-cargill.png" alt="Cargill" loading="lazy">
+      <img src="assets/cliente-cofco.png" alt="COFCO International" loading="lazy">
+      <img src="assets/cliente-barbosa-mello.png" alt="Construtora Barbosa Mello" loading="lazy">
+      <img src="assets/cliente-polimix.png" alt="Polimix Aglomerante" loading="lazy">
+      <img src="assets/cliente-cnn.png" alt="CNN Cal Norte Nordeste" loading="lazy">
+      <img src="assets/cliente-votorantim.png" alt="Votorantim" loading="lazy">
+      <img src="assets/cliente-intercement.png" alt="InterCement" loading="lazy">
+      <img src="assets/cliente-mizu.png" alt="Mizu Cimentos" loading="lazy">
+      <img src="assets/cliente-apodi.png" alt="Cimento Apodi" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="sec sec--white" id="contato">
+  <div class="wrap">
+    <div class="head rv"><h2 class="title">Fale conosco</h2></div>
+    <div class="card talk rv">
+      <div>
+        <span class="talk__logo" style="display:block"><img src="assets/logo-g2m.png" alt="" loading="lazy"></span>
+        <h3>Fale com a G2M Log!</h3>
+        <p>Precisa de transporte para sua carga? Dúvidas sobre nossos serviços? Entre em contato conosco.</p>
+        <a class="btn" href="https://wa.me/556630160656?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20frete." target="_blank" rel="noopener">Entre em contato <span class="arrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      </div>
+      <div class="talk__img"><img src="assets/contato-equipe.jpg" alt="Equipe de diretores do grupo" loading="lazy"></div>
+    </div>
+    <div class="contacts">
+      <div class="card rv"><h4><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg>WhatsApp e telefone</h4><ul><li><a href="https://wa.me/556630160656?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20frete." target="_blank" rel="noopener">(66) 3016-0656</a></li></ul></div>
+      <div class="card rv"><h4><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>E-mail</h4><ul><li><a href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></li></ul></div>
+      <div class="card rv"><h4><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>Instagram</h4><ul><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a></li><li><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a></li></ul></div>
+    </div>
+    <div class="card job rv" id="trabalhe-conosco">
+      <div><h4>Trabalhe conosco</h4><p>Quer fazer parte do grupo? Envie seu currículo, o e-mail já abre pronto, é só anexar o arquivo.</p></div>
+      <a class="btn" href="mailto:giramundotransportes120@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20G2M%20Log&amp;body=Ol%C3%A1%2C%20equipe%20G2M%20Log%21%0A%0ATenho%20interesse%20em%20trabalhar%20com%20voc%C3%AAs%20e%20envio%20meu%20curr%C3%ADculo%20em%20anexo.%0A%0ANome%3A%0ATelefone/WhatsApp%3A%0ACidade%3A%0A%C3%81rea%20de%20interesse%20%28ex.%3A%20motorista%2C%20administrativo%2C%20manuten%C3%A7%C3%A3o%29%3A%0A%0AObrigado%28a%29%21"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Enviar currículo</a>
+    </div>
   </div>
 </section>
 
 </main>
 
-<footer class="ft" id="contato">
-  <div class="wrap ft__top">
-    <div class="ft__brand"><img src="assets/logo-g2m.png" alt="Logo G2M Log" loading="lazy"><p>Conectando cargas ao que move o Brasil.</p></div>
-    <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#grupo">O Grupo</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#cotacao">Cotação</a></li><li><a href="#trabalhe-conosco">Trabalhe Conosco</a></li></ul></div>
-    <div><h4>Empresas do grupo</h4><ul><li>GiraMundo Transportes</li><li>Mundo Novo Transportes</li></ul></div>
-    <div><h4>Contato</h4><ul><li><a href="tel:+556630160656">(66) 3016-0656</a></li><li><a class="ft__mail" href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></li></ul><h4 class="ft__ig">Instagram</h4><ul><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">@g2m.log</a></li><li><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">@giramundotransportes</a></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">@mundonovotransportes</a></li></ul></div>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__top">
+      <div class="ft__brand"><img src="assets/logo-g2m.png" alt="Logo G2M Log" loading="lazy"><p>Há mais de 25 anos no mercado. Grupo GiraMundo e Mundo Novo, conectando cargas ao que move o Brasil.</p></div>
+      <div><h4>Institucional</h4><ul><li><a href="#home">Home</a></li><li><a href="#quem-somos">Quem somos</a></li><li><a href="#onde-atuamos">Onde atuamos</a></li><li><a href="#clientes">Clientes</a></li><li><a href="#trabalhe-conosco">Trabalhe conosco</a></li></ul></div>
+      <div><h4>Links úteis</h4><ul><li><a href="https://www.instagram.com/g2m.log/" target="_blank" rel="noopener">Instagram G2M Log</a></li><li><a href="https://www.instagram.com/giramundotransportes/" target="_blank" rel="noopener">Instagram GiraMundo</a></li><li><a href="https://www.instagram.com/mundonovotransportes/" target="_blank" rel="noopener">Instagram Mundo Novo</a></li></ul></div>
+      <div><h4>Atendimento</h4><ul><li><a href="tel:+556630160656">(66) 3016-0656</a></li><li><a class="ft__mail" href="mailto:giramundotransportes120@gmail.com">giramundotransportes120@gmail.com</a></li></ul></div>
+    </div>
+    <div class="ft__bottom"><span>© 2026 Todos os direitos reservados – G2M Log</span><span>GiraMundo Transportes e Mundo Novo Transportes</span></div>
   </div>
-  <div class="ft__bottom"><div class="wrap">© 2026 G2M Log. Todos os direitos reservados.</div></div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/556630160656?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg></a>
+<a class="wa-float" href="https://wa.me/556630160656?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20frete." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ic-wa" aria-hidden="true"><use href="#wa"/></svg></a>
 
 <script>
 (function(){
   "use strict";
-  var WA="556630160656";
   var hd=document.getElementById("hd");
-  var onS=function(){hd.classList.toggle("sh",window.scrollY>10)}; onS(); window.addEventListener("scroll",onS,{passive:true});
+  var onS=function(){hd.classList.toggle("sh",window.scrollY>8)}; onS(); window.addEventListener("scroll",onS,{passive:true});
 
+  /* menu do celular */
   var nav=document.getElementById("nav"), bg=document.getElementById("burger");
   function close(){nav.classList.remove("open");bg.setAttribute("aria-expanded","false");bg.setAttribute("aria-label","Abrir menu")}
   bg.addEventListener("click",function(){var o=!nav.classList.contains("open");nav.classList.toggle("open",o);bg.setAttribute("aria-expanded",String(o));bg.setAttribute("aria-label",o?"Fechar menu":"Abrir menu")});
@@ -538,71 +539,32 @@ button,input,select,textarea{font:inherit;color:inherit}
   document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   window.addEventListener("resize",function(){if(window.innerWidth>960)close()});
 
-
-  /* menu: marca a seção que está na tela */
-  var links=[].slice.call(document.querySelectorAll(".nav ul a"));
+  /* menu marca a seção visível */
+  var links=[].slice.call(document.querySelectorAll(".nav a"));
   var targets=links.map(function(l){return document.querySelector(l.getAttribute("href"))});
-  var ticking=false;
-  function mark(){
-    ticking=false;
-    var line=hd.offsetHeight+window.innerHeight*0.35, cur=0;
-    targets.forEach(function(t,i){ if(t && t.getBoundingClientRect().top<=line) cur=i; });
-    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets.length-1;
-    links.forEach(function(l,i){ l.classList.toggle("on",i===cur); if(i===cur) l.setAttribute("aria-current","true"); else l.removeAttribute("aria-current"); });
-  }
-  window.addEventListener("scroll",function(){ if(!ticking){ticking=true;requestAnimationFrame(mark);} },{passive:true});
-  window.addEventListener("resize",mark); mark();
+  var tk=false;
+  function mark(){tk=false;var line=hd.offsetHeight+window.innerHeight*.35,cur=0;
+    targets.forEach(function(t,i){if(t&&t.getBoundingClientRect().top<=line)cur=i});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4)cur=targets.length-1;
+    links.forEach(function(l,i){l.classList.toggle("on",i===cur)})}
+  window.addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(mark)}},{passive:true}); mark();
 
-
-  /* Trabalhe conosco: etapas acendem em sequência; passar o mouse ou tocar escolhe a etapa */
-  var steps=[].slice.call(document.querySelectorAll(".job__steps li"));
-  if(steps.length){
-    var cur=0, timer=null, pauseUntil=0;
-    var setOn=function(i){cur=i;steps.forEach(function(s,k){s.classList.toggle("on",k===i)})};
-    setOn(0);
-    var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var tick=function(){ if(Date.now()<pauseUntil) return; setOn((cur+1)%steps.length); };
-    var start=function(){ if(!timer && !reduce) timer=setInterval(tick,2200); };
-    var stop=function(){ clearInterval(timer); timer=null; };
-    steps.forEach(function(s,i){
-      var pick=function(){ setOn(i); pauseUntil=Date.now()+5000; };
-      s.addEventListener("mouseenter",pick); s.addEventListener("click",pick);
+  /* acordeão: um aberto por vez */
+  var items=[].slice.call(document.querySelectorAll(".acc__item"));
+  items.forEach(function(it){
+    it.querySelector(".acc__btn").addEventListener("click",function(){
+      var willOpen=!it.classList.contains("open");
+      items.forEach(function(o){o.classList.remove("open");o.querySelector(".acc__btn").setAttribute("aria-expanded","false")});
+      if(willOpen){it.classList.add("open");this.setAttribute("aria-expanded","true")}
     });
-    if("IntersectionObserver" in window){
-      new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){setOn(0);start();} else stop(); })},{threshold:.35}).observe(steps[0].parentNode);
-    }
-  }
-
-  /* Cotação → WhatsApp com mensagem pronta */
-  var form=document.getElementById("quoteForm"), err=document.getElementById("formErr");
-  form.addEventListener("submit",function(e){
-    e.preventDefault();
-    var ok=true, first=null;
-    form.querySelectorAll("[required]").forEach(function(f){
-      var bad=!f.value.trim(); f.closest(".fld").classList.toggle("err",bad); f.setAttribute("aria-invalid",bad?"true":"false");
-      if(bad){ok=false; if(!first)first=f;}
-    });
-    err.classList.toggle("show",!ok);
-    if(!ok){first.focus();return;}
-    var v=function(n){return form.elements[n].value.trim()};
-    var msg="Olá! Gostaria de solicitar uma cotação de transporte.\n\n"+
-      "Nome: "+v("nome")+"\n"+
-      (v("empresa")?"Empresa: "+v("empresa")+"\n":"")+
-      "Telefone: "+v("telefone")+"\n"+
-      "Tipo de carga: "+v("carga")+"\n"+
-      "Origem: "+v("origem")+"\n"+
-      "Destino: "+v("destino")+
-      (v("detalhes")?"\nDetalhes: "+v("detalhes"):"");
-    window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank","noopener");
   });
-  form.querySelectorAll("[required]").forEach(function(f){f.addEventListener("input",function(){if(f.value.trim()){f.closest(".fld").classList.remove("err");f.setAttribute("aria-invalid","false")}})});
 
-  /* entradas suaves + link ativo */
+  /* entrada suave */
   if(!("IntersectionObserver" in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")});
+    document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")});
   }else{
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -6% 0px"});
-    document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+    document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
   }
 })();
 </script>
