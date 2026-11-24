@@ -271,6 +271,18 @@ button,input,select,textarea{font:inherit;color:inherit}
   .brand span{display:none}
 }
 @media (max-width:960px){
+  /* cabeçalho escuro no celular, contínuo com o hero */
+  .hd{background:var(--navy);border-bottom-color:rgba(255,255,255,.1)}
+  .hd.sh{box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  .brand span{display:block;color:rgba(255,255,255,.7);border-left-color:rgba(255,255,255,.2);font-size:13px;padding-left:12px}
+  .brand span b{color:#fff;font-size:15px}
+  .burger{background:transparent;border-color:rgba(255,255,255,.3)}
+  .burger i{background:#fff}
+  .hd .nav{background:var(--navy);border-bottom-color:rgba(255,255,255,.1)}
+  .hd .nav ul a{color:#fff;border-bottom-color:rgba(255,255,255,.12)}
+  /* faixas fora do texto */
+  .vals__bands{display:none}
+  .quote::before,.quote::after{bottom:auto;height:calc(var(--cut) + 36px)}
   .hd .wrap{height:70px}
   .brand img{width:46px;height:46px}
   .burger{display:flex}
